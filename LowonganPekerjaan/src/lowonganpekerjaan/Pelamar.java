@@ -25,12 +25,14 @@ public class Pelamar extends Orang{
 
 	public void cariLowongan (String cari1){
             if (cari1==nama){
-                return ;
+                return daftarLowongan.jenis;
             }
 	}
 
 	public void cariLowongan (String cari2){
-                
+            if (cari2==perusahaan){
+                return daftarLowongan;
+            }
 	}
         
 	public void setApproval (String approval){
