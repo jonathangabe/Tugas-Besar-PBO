@@ -88,12 +88,12 @@ public class Lowongan {
 		}
 	}
 	
-	public int jmlBerkasM
+	public int jmlBerkasM()
 	{
 		return nBerkasM;
 	}
 	
-	public int jmlBerkasD
+	public int jmlBerkasD()
 	{
 		return nBerkasD;
 	}
