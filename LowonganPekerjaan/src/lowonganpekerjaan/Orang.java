@@ -1,40 +1,31 @@
 package lowonganpekerjaan;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Hasobi
- */
 public abstract class Orang
 {
-	private String Name;
-	private String Tanggal;
+	private String name;
+	private String tanggal;
 	
-	public Orang(String Name,String Tanggal)
+	public Orang(String name,String tanggal)
 	{
-		setName(Name);
-		setTanggal(Tanggal);
+		setName(name);
+		setTanggal(tanggal);
 	}
+        
 	public String getName()
 	{
-		return Name;
+		return name;
 	}
 	public String getTanggal()
 	{
-		return Tanggal;
+		return tanggal;
 	}
-	public void setName(String Name)
+	public void setName(String name)
 	{
-		this.Name=Name;
+		this.name=name;
 	}
-	public void setTanggal(String Tanggal)
+	public void setTanggal(String tanggal)
 	{
-		this.Tanggal=Tanggal;
+		this.tanggal=tanggal;
 	}
 
 }

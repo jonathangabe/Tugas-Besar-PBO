@@ -1,91 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lowonganpekerjaan;
 
-/**
- *
- * @author user
- */
-public class Lowongan {
-    public class Lowongan{
-	private BerkasLamaran[] berkasMasuk;
-	private BerkasLamaran[] berkasDiterima; 
+import java.util.ArrayList;
+
+public class Lowongan{
+	private ArrayList<BerkasLamaran> berkasMasuk = new ArrayList<BerkasLamaran>();
+	private ArrayList<BerkasLamaran> berkasDiterima = new ArrayList<BerkasLamaran>(); 
 	private String jenisPekerjaan;
 	private String requirement;
 	private int nBerkasM=0;
 	private int nBerkasD=0;
 	private int idLowongan;
-	
-	public Lowongan(int id, String jenisKerja, String req, int maxMasuk, int maxTerima)
-	{
-		idLowongan=id;
-		jenisPekerjaan=jenisKerja;
-		requirement=req;
-		berkasMasuk=new BerkasLamaran[maxMasuk];
-		berkasDiterima=new BerkasLamaran[maxTerima];
-	}
+        //int maxMasuk=10;
+        //int maxTerima=10;
 	
 	public Lowongan(int id, String jenisKerja, String req)
 	{
 		idLowongan=id;
 		jenisPekerjaan=jenisKerja;
 		requirement=req;
-		berkasMasuk=new BerkasLamaran[10];
-		berkasDiterima=new BerkasLamaran[10];
 	}
 	
 	public void addBerkas(BerkasLamaran bl)
 	{
-		if (nBerkasM<berkasMasuk.length)
-		{
-			berkasMasuk[nBerkasM]=bl;
-			nBerkasM++;
-		}
-		else 
-		{
-			System.out.println("Batas berkas masuk sudah penuh!");
-		}
+		berkasMasuk.add(bl);
 	}
 	
 	public BerkasLamaran getBerkasMidx(int idx)
 	{
-		return berkasMasuk[idx];
+		return berkasMasuk.get(idx);
 	}
 	
 	public BerkasLamaran getBerkasMid(int id)
 	{
-		i=0;
-		BerkasLamaran bl=null;
-		do 
-		{
-			if (id==berkasMasuk[i].getId())
-			{
-				bl=berkasMasuk[i];
-				i=nBerkasM;
-				return bl;
-			}
-			else
-			{
-				i++;
-			}
-		}
-		while(i<nBerkasM);
+            BerkasLamaran bl = null;
+            for (int i=0;i<berkasMasuk.size();i++){
+                if (id==berkasMasuk.get(i).getIdLamaran()){
+                    bl=berkasMasuk.get(i);
+                }
+            }
+                return bl;
 	}
 	
-	public void berkasDiterimaIdx(int n)
+	public void berkasDiterimaIdx(int id)
 	{
-		if (nBerkasD<berkasDiterima.length)
-		{
-			berkasDiterima[nBerkasD]=berkasMasuk[n];
-			nBerkasD++;
-		}
-		else 
-		{
-			System.out.println("Batas berkas diterima sudah penuh!");
-		}
+            berkasDiterima.add(getBerkasMid(id));
+            removeBerkasMasuk(id);
 	}
 	
 	public int jmlBerkasM()
@@ -98,35 +57,29 @@ public class Lowongan {
 		return nBerkasD;
 	}
 	
-	public void removeBerkasMasuk()
+	public void removeBerkasMasuk(int id)
 	{
-		berkasMasuk[nBerkasM]=null;
-		nBerkasM--;
+            for (int i=0;i<berkasMasuk.size();i++){
+                if (id==berkasMasuk.get(i).getIdLamaran()){
+                    berkasMasuk.remove(i);
+                }
+            }
 	}	
 	
-	public int getBerkasDidx(int idx)
+	public BerkasLamaran getBerkasDidx(int idx)
 	{
-		return berkasDiterima[idx];
+		return berkasDiterima.get(idx);
 	}
 	
 	public BerkasLamaran getBerkasDid(int id)
 	{
-		i=0;
-		BerkasLamaran bl=null;
-		do 
-		{
-			if (id==berkasDiterima[i].getId())
-			{
-				bl=berkasDiterima[i];
-				i=nBerkasD;
-				return bl;
-			}
-			else
-			{
-				i++;
-			}
-		}
-		while(i<nBerkasD);
+            BerkasLamaran bl = null;
+            for (int i=0;i<berkasDiterima.size();i++){
+                if (id==berkasDiterima.get(i).getIdLamaran()){
+                    bl=berkasDiterima.get(i);
+                }
+            }
+                return bl;
 	}
 	
 	public int getId()

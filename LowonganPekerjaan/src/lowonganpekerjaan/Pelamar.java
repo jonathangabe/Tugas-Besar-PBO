@@ -1,41 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lowonganpekerjaan;
 
-/**
- *
- * @author Windows 7
- */
 public class Pelamar extends Orang{
-	private berkasLamaran berkas;
+	private BerkasLamaran berkas;
 	private String approval;
 
-	public Pelamar (String nama, String tgl, String approval){
-            this.nama = nama;
-            this.tgl = tgl;
+	public Pelamar(String name, String tanggal, String approval){
+            super(name, tanggal);
             setApproval(approval);
 	}
         
-	public void createBerkas (int i, String j, String k, String l){
-            berkasLamaran berkas = new berkasLamaran(i,j,k,l);
+	public void createBerkas(int i, String j, String k, String l){
+            BerkasLamaran berkas = new BerkasLamaran(i,j,k,l);
 	}
 
-	public void cariLowongan (String cari1){
-            if (cari1==nama){
-                return daftarLowongan.jenis;
-            }
-	}
-
-	public void cariLowongan (String cari2){
-            if (cari2==perusahaan){
-                return daftarLowongan;
-            }
-	}
-        
-	public void setApproval (String approval){
+	public void setApproval(String approval){
             this.approval = approval;		
 	}
 

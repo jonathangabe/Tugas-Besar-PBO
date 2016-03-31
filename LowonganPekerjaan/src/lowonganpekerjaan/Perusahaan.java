@@ -1,73 +1,46 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lowonganpekerjaan;
 
-/**
- *
- * @author user
- */
+import java.util.ArrayList;
+
 public class Perusahaan extends Orang{
-	private Lowongan[] daftarLowongan;
-	private String jenis;
+	private ArrayList<Lowongan> daftarLowongan = new ArrayList<Lowongan>();
+	private String namep;
 	private int nLowongan=0;
 	
-	public Perusahaan(String jenis, int maxLowongan)
+	public Perusahaan(String namep, String name, String tanggal)
 	{
-		this.jenis=jenis;
-		daftarLowongan = new Lowongan[maxLowongan];
+            super(name, tanggal);
+            this.namep=namep;
 	}
 	
-	public Perusahaan(String jenis)
+	public void createLowongan(Lowongan l)
 	{
-		this.jenis=jenis;
-		daftarLowongan = new Lowongan[10];
-	}
-	
-	public void createLowongan(Date deadline, String jeniskerja, String req)
-	{
-		if (nLowongan<daftarLowongan.length)
-		{
-			daftarLowongan[nLowongan]=new Lowongan(deadline,jeniskerja,req);
-			nLowongan++;
-		}
-		else 
-		{
-			System.out.println("Lowongan sudah penuh!");
-		}
+            daftarLowongan.add(l);
 	}
 	
 	public Lowongan getLowonganidx(int idx)
 	{
-		return daftarLowongan[idx];
+		return daftarLowongan.get(idx);
 	}
 	
 	public Lowongan getLowonganid(int id)
 	{
-		i=0;
-		Lowongan l=null;
-		do 
-		{
-			if (id==daftarLowongan[i].getId())
-			{
-				l=daftarLowongan[i];
-				i=nLowongan;
-				return l;
-			}
-			else
-			{
-				i++;
-			}
-		}
-		while(i<nLowongan);
+            Lowongan l = null;
+            for (int i=0;i<daftarLowongan.size();i++){
+                if (id==daftarLowongan.get(i).getId()){
+                    l=daftarLowongan.get(i);
+                }
+            }
+                return l;
 	}
 	
-	public void removeLowongan()
+	public void removeLowongan(int id)
 	{
-		daftarLowongan[nLowongan]=null;
-		nLowongan--;
+            for (int i=0;i<daftarLowongan.size();i++){
+                if (id==daftarLowongan.get(i).getId()){
+                    daftarLowongan.remove(i);
+                }
+            }
 	}	
 	
 /* public void ketLamaran(int indexLowongan,int idberkas)
@@ -75,14 +48,14 @@ public class Perusahaan extends Orang{
 		daftarLowongan[indexLowongan]
 	}
 */	
-	public int jmlPelamarMasuk(int n)
+	public int jmlPelamarMasuk(int id)
 	{
-		return daftarLowongan[n].jmlBerkasM();
+		return daftarLowongan.get(id).jmlBerkasM();
 	}
 	
-	public int jmlPelamarDiterima(int n)
+	public int jmlPelamarDiterima(int id)
 	{
-		return daftarLowongan[n].jmlBerkasD();
+		return daftarLowongan.get(id).jmlBerkasD();
 	}
 	
 /*	public void lihatPelamar
