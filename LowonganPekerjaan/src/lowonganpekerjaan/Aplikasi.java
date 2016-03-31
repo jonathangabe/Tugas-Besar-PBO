@@ -220,13 +220,15 @@ public class Aplikasi{
                     
                 case 2:
                     System.out.println("Input data Lowongan");
-                    System.out.print("ID Lowongan : ");
+                    System.out.print("ID Perusahaan : ");
                     id = in.nextInt();
+                    System.out.print("ID Lowongan : ");
+                    int tempIdl = in.nextInt();
                     System.out.print("Jenis Lowongan : ");
                     String jns = in.nextLine();
                     System.out.print("Requirements : ");
                     String req = in.nextLine();
-                    Lowongan tempL = new Lowongan(id, jns, req);
+                    Lowongan tempL = new Lowongan(tempIdl, jns, req);
                     menuDua(id, tempL);
                     
                 case 3:
@@ -248,8 +250,11 @@ public class Aplikasi{
                     
                 case 5:
                     Lowongan tempLo;
+                    System.out.print("ID Perusahaan : ");
+                    id = in.nextInt();
                     System.out.println("ID Lowongan yang akan dihapus = ");
-                    int tempIdl = in.nextInt();
+                    tempIdl = in.nextInt();
+                    menuLima(id, tempIdl);
                                         
                 case 6:
                     System.out.println("ID Pelamar yang akan dihapus = ");
@@ -281,8 +286,7 @@ public class Aplikasi{
                 case 12:
                     System.out.print("ID Pelamar yang akan dicari = ");
                     id = in.nextInt();
-                    menuDuabelas(id);
-                    
-        }
+                    menuDuabelas(id);                    
+            }
         }
 }
