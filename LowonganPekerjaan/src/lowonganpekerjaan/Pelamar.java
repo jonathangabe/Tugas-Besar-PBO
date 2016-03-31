@@ -5,9 +5,9 @@ public class Pelamar extends Orang{
         private int idPelamar;
 	private String approval;
 
-	public Pelamar(String name, String tanggal, String approval, int id){
+	public Pelamar(String name, String tanggal, int id){
             super(name, tanggal);
-            setApproval(approval);
+            //setApproval(approval);
             idPelamar=id;
 	}
         

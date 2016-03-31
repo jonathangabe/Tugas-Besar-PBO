@@ -53,6 +53,7 @@ public class Aplikasi{
         for (int i=0;i<daftarPerusahaan.size();i++){
                 if (id==daftarPerusahaan.get(i).getId()){
                     daftarPerusahaan.remove(i);
+                    System.out.println("Perusahaan dengan ID "+daftarPerusahaan.get(i).getId()+" telah dihapus");
                 }
             }    
 	}	
@@ -127,17 +128,66 @@ public class Aplikasi{
             System.out.println("0. Exit");
             System.out.println("Pilihan : ");
             pil = in.nextInt();
+            
             switch (pil) {
                 case 1:
                     System.out.println("Input data Perusahaan");
                     System.out.print("ID Perusahaan : ");
-                    id = in.nextInt();
+                    int id = in.nextInt();
                     System.out.print("Nama Perusahaan : ");
-                    nm = in.nextLine();
+                    String nm = in.nextLine();
                     System.out.print("Nama CEO : ");
-                    nmceo = in.nextLine();
+                    String nmceo = in.nextLine();
                     System.out.print("Tanggal Dibuat : ");
-                    tgl = in.nextLine();
+                    String tgl = in.nextLine();
+                    
+                case 2:
+                    System.out.println("Input data Lowongan");
+                    System.out.print("ID Lowongan : ");
+                    int idl = in.nextInt();
+                    System.out.print("Jenis Lowongan : ");
+                    String jns = in.nextLine();
+                    System.out.print("Requirements : ");
+                    String req = in.nextLine();
+                    
+                case 3:
+                    System.out.println("Input data Pelamar");
+                    System.out.print("ID Pelamar : ");
+                    String idpe = in.nextLine();
+                    System.out.print("Nama Pelamar : ");
+                    String nmp = in.nextLine();
+                    System.out.print("Tanggal : ");
+                    String tglp = in.nextLine();
+                    
+                case 4:
+                    Perusahaan tempPer;
+                    System.out.println("ID Perusahaan yang akan dihapus = ");
+                    int tempId = in.nextInt();
+                    deletePerusahaan(tempId);
+                    
+                case 5:
+                    Lowongan tempLo;
+                    System.out.println("ID Lowongan yang akan dihapus = ");
+                    int tempIdl = in.nextInt();
+                    
+                case 6:
+                    System.out.println("ID Pelamar yang akan dihapus = ");
+                    int tempIdpe = in.nextInt();
+                    
+                case 7:
+                    System.out.println("\tDaftar Perusahaan");
+                    
+                    
+                case 8:
+                    System.out.println("");
+                case 9:
+                    System.out.println("");
+                case 10:
+                    System.out.println("");
+                case 11:
+                    System.out.println("");
+                case 12:
+                    System.out.println("");
         }
         }
 }
