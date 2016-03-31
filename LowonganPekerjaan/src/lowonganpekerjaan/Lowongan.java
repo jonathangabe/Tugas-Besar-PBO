@@ -19,9 +19,7 @@ public class Lowongan{
 		jenisPekerjaan=jenisKerja;
 		requirement=req;
 	}
-	public int NLamaranMasuk (){
-            
-        }
+	
 	public void addBerkas(BerkasLamaran bl)
 	{
 		berkasMasuk.add(bl);
