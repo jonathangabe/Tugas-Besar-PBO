@@ -20,6 +20,16 @@ public class Lowongan{
 		requirement=req;
 	}
 	
+        public String getJenis()
+        {
+            return jenisPekerjaan;
+        }
+        
+        public String getReq()
+        {
+            return requirement;
+        }
+        
 	public void addBerkas(BerkasLamaran bl)
 	{
 		berkasMasuk.add(bl);
@@ -49,13 +59,14 @@ public class Lowongan{
 	
 	public int jmlBerkasM()
 	{
-                nBerkasM=this.berkasMasuk.size();
-		return nBerkasM;
+            nBerkasM=this.berkasMasuk.size();
+            return nBerkasM;
 	}
 	
 	public int jmlBerkasD()
 	{
-		return nBerkasD;
+            nBerkasD=this.berkasDiterima.size();
+            return nBerkasD;
 	}
 	
 	public void removeBerkasMasuk(int id)

@@ -13,7 +13,9 @@ import java.util.Scanner;
 public class Aplikasi{
 	private ArrayList<Perusahaan> daftarPerusahaan = new ArrayList<Perusahaan>();
 	private ArrayList<Pelamar> daftarPelamar = new ArrayList<Pelamar>();
-	Scanner in = new Scanner(System.in);
+	private int nPerusahaan=0;
+        private int nPelamar=0;
+        Scanner in = new Scanner(System.in);
         int pil;
         
 	public void addPerusahaan(Perusahaan p)
@@ -66,6 +68,18 @@ public class Aplikasi{
             }
 	}
         
+        public int jumlahPerusahaan()
+        {
+            nPerusahaan=this.daftarPerusahaan.size();
+            return nPerusahaan;
+        }
+        
+        public int jumlahPelamar()
+        {
+            nPelamar=this.daftarPelamar.size();
+            return nPelamar;
+        }
+        
         public void menuSatu(Perusahaan p)
         {
             addPerusahaan(p);
@@ -78,7 +92,7 @@ public class Aplikasi{
         
         public void menuTiga(Pelamar pl)
         {
-            addPelamar(pl);
+            addPelamar(pl); 
         }
         
         public void menuEmpat(int id)
@@ -98,12 +112,72 @@ public class Aplikasi{
         
         public void menuTujuh(int id)
         {
-            System.out.println("ID Perusahaan: "+);
-            System.out.println("Nama Perusahaan: "+);
-            System.out.println("Jumlah Lowongan: "+);
+            for (int i=0;i<this.daftarPerusahaan.size();i++)
+            {
+                System.out.println("ID Perusahaan: "+daftarPerusahaan.get(i).getId());
+                System.out.println("Nama Perusahaan: "+daftarPerusahaan.get(i).getNameP());
+                System.out.println("Jumlah Lowongan: "+daftarPerusahaan.get(i).jumlahLowongan());
+                System.out.println("CEO: "+daftarPerusahaan.get(i).getName());
+            }
         }
         
+        
         public void menuDelapan(int id)
+        {
+            for (int i=0;i<jumlahPerusahaan();i++)
+            {
+                for (int j=0;j<daftarPerusahaan.get(i).jumlahLowongan();j++)
+                {
+                    System.out.println("ID Lowongan: "+daftarPerusahaan.get(i).getLowonganidx(j).getId());
+                    System.out.println("Nama Lowongan: "+daftarPerusahaan.get(i).getLowonganidx(j).getJenis());
+                    System.out.println("Requirement: "+daftarPerusahaan.get(i).getLowonganidx(j).getReq());
+                    
+                }
+            }
+        }
+        
+        public void menuSembilan()
+        {
+            for (int i=0;i<this.daftarPelamar.size();i++)
+            {
+                System.out.println("ID Pelamar: "+daftarPelamar.get(i).getId());
+                System.out.println("Nama Pelamar: "+daftarPelamar.get(i).getName());
+                System.out.println("Status: "+daftarPelamar.get(i).getApproval());
+                System.out.println("Edukasi: "+daftarPelamar.get(i).getBerkas().getedukasi());
+                System.out.println("Pengalaman: "+daftarPelamar.get(i).getBerkas().getPengalaman());
+                System.out.println("Alasan Mendaftar: "+daftarPelamar.get(i).getBerkas().getReason());
+            }
+        }
+        
+        public void menuSepuluh(int id)
+        {
+            System.out.println("ID Perusahaan: "+getPerusahaan(id).getId());
+            System.out.println("Nama Perusahaan: "+getPerusahaan(id).getNameP());
+            System.out.println("Jumlah Lowongan: "+getPerusahaan(id).jumlahLowongan());
+            System.out.println("CEO: "+getPerusahaan(id).getName());
+        }
+        
+        public void menuSebelas(int id)
+        {
+            for (int i=0;i<jumlahPerusahaan();i++)
+            {
+                System.out.println("ID Lowongan: "+daftarPerusahaan.get(i).getLowonganid(id).getId());  
+                System.out.println("Nama Lowongan: "+daftarPerusahaan.get(i).getLowonganid(id).getJenis());
+                System.out.println("Requirement: "+daftarPerusahaan.get(i).getLowonganid(id).getReq());
+            }
+        }
+        
+        public void menuDuabelas(int id)
+        {
+            System.out.println("ID Pelamar: "+getPelamar(id).getId());
+            System.out.println("Nama Pelamar: "+getPelamar(id).getName());
+            System.out.println("Status: "+getPelamar(id).getApproval());
+            System.out.println("Edukasi: "+getPelamar(id).getBerkas().getedukasi());
+            System.out.println("Pengalaman: "+getPelamar(id).getBerkas().getPengalaman());
+            System.out.println("Alasan Mendaftar: "+getPelamar(id).getBerkas().getReason());
+        }
+        
+        public void menuTigaBelas()
         {
             
         }
