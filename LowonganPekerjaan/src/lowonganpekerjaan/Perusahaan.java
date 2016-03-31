@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 public class Perusahaan extends Orang{
 	private ArrayList<Lowongan> daftarLowongan = new ArrayList<Lowongan>();
+        private int idPerusahaan;
 	private String namep;
 	private int nLowongan=0;
 	
-	public Perusahaan(String namep, String name, String tanggal)
+	public Perusahaan(String namep, String name, String tanggal, int id)
 	{
             super(name, tanggal);
             this.namep=namep;
+            idPerusahaan=id;
 	}
 	
 	public void createLowongan(Lowongan l)
@@ -62,4 +64,9 @@ public class Perusahaan extends Orang{
 	{
 		System.out.println()
 	} */
+        
+        public int getId()
+        {
+            return idPerusahaan;
+        }
 }
