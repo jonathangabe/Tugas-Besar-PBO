@@ -11,8 +11,8 @@ public class Pelamar extends Orang{
             idPelamar=id;
 	}
         
-	public void createBerkas(int i, String j, String k, String l){
-            BerkasLamaran berkas = new BerkasLamaran(i,j,k,l);
+	public void createBerkas(BerkasLamaran bl){
+            berkas = bl;
 	}
 
 	public void setApproval(String approval){

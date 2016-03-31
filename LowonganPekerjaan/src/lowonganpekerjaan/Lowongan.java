@@ -19,7 +19,9 @@ public class Lowongan{
 		jenisPekerjaan=jenisKerja;
 		requirement=req;
 	}
-	
+	public int NLamaranMasuk (){
+            
+        }
 	public void addBerkas(BerkasLamaran bl)
 	{
 		berkasMasuk.add(bl);
@@ -49,6 +51,7 @@ public class Lowongan{
 	
 	public int jmlBerkasM()
 	{
+                nBerkasM=this.berkasMasuk.size();
 		return nBerkasM;
 	}
 	
@@ -84,6 +87,6 @@ public class Lowongan{
 	
 	public int getId()
 	{
-		return idLowongan;
+            return idLowongan;
         }
 }
