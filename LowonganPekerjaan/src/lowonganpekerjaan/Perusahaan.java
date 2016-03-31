@@ -69,4 +69,21 @@ public class Perusahaan extends Orang{
         {
             return idPerusahaan;
         }
+        
+        public String getNameP()
+        {
+            return namep;
+        }
+        
+        @Override
+        public String getName()
+        {
+            return super.getName();
+        }
+        
+        public int jumlahLowongan()
+        {
+            nLowongan=this.daftarLowongan.size();
+            return nLowongan;
+        }
 }

@@ -11,8 +11,15 @@ public class Pelamar extends Orang{
             idPelamar=id;
 	}
         
+        
+        
 	public void createBerkas(BerkasLamaran bl){
             berkas = bl;
+	}
+        
+        public BerkasLamaran getBerkas()
+	{
+		return berkas;
 	}
 
 	public void setApproval(String approval){
