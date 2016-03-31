@@ -49,6 +49,7 @@ public class Lowongan{
 	
 	public int jmlBerkasM()
 	{
+                nBerkasM=this.berkasMasuk.size();
 		return nBerkasM;
 	}
 	
@@ -84,6 +85,6 @@ public class Lowongan{
 	
 	public int getId()
 	{
-		return idLowongan;
+            return idLowongan;
         }
 }
