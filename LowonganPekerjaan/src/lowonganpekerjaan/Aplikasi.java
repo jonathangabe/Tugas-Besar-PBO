@@ -111,7 +111,7 @@ public class Aplikasi{
             deletePelamar(id);
         }
         
-        public void menuTujuh(int id)
+        public void menuTujuh()
         {
             for (int i=0;i<this.daftarPerusahaan.size();i++)
             {
@@ -123,7 +123,7 @@ public class Aplikasi{
         }
         
         
-        public void menuDelapan(int id)
+        public void menuDelapan()
         {
             for (int i=0;i<jumlahPerusahaan();i++)
             {
@@ -185,6 +185,7 @@ public class Aplikasi{
         
         public void mainMenu()
         {
+            int id;
             System.out.println("APLIKASI LOWONGAN PEKERJAAN");
             System.out.println("\tMenu : ");
             System.out.println("1. Add Perusahaan");
@@ -207,7 +208,7 @@ public class Aplikasi{
                 case 1:
                     System.out.println("Input data Perusahaan");
                     System.out.print("ID Perusahaan : ");
-                    int id = in.nextInt();
+                    id = in.nextInt();
                     System.out.print("Nama Perusahaan : ");
                     String nm = in.nextLine();
                     System.out.print("Nama CEO : ");
@@ -218,7 +219,7 @@ public class Aplikasi{
                 case 2:
                     System.out.println("Input data Lowongan");
                     System.out.print("ID Lowongan : ");
-                    int idl = in.nextInt();
+                    id = in.nextInt();
                     System.out.print("Jenis Lowongan : ");
                     String jns = in.nextLine();
                     System.out.print("Requirements : ");
@@ -227,7 +228,7 @@ public class Aplikasi{
                 case 3:
                     System.out.println("Input data Pelamar");
                     System.out.print("ID Pelamar : ");
-                    String idpe = in.nextLine();
+                    id = in.nextInt();
                     System.out.print("Nama Pelamar : ");
                     String nmp = in.nextLine();
                     System.out.print("Tanggal : ");
@@ -250,18 +251,31 @@ public class Aplikasi{
                     
                 case 7:
                     System.out.println("\tDaftar Perusahaan");
-                    
+                    menuTujuh();                    
                     
                 case 8:
-                    System.out.println("");
+                    System.out.println("\tDaftar Lowongan");
+                    menuDelapan();
+                    
                 case 9:
-                    System.out.println("");
+                    System.out.println("\tDaftar Pelamar");                    
+                    menuSembilan();
+                    
                 case 10:
-                    System.out.println("");
+                    System.out.print("ID Perusahaan yang akan dicari = ");
+                    id = in.nextInt();
+                    menuSepuluh(id);
+                    
                 case 11:
-                    System.out.println("");
+                    System.out.print("ID Lowongan yang akan dicari = ");
+                    id = in.nextInt();
+                    menuSebelas(id);
+                    
                 case 12:
-                    System.out.println("");
+                    System.out.print("ID Pelamar yang akan dicari = ");
+                    id = in.nextInt();
+                    menuDuabelas(id);
+                    
         }
         }
 }
