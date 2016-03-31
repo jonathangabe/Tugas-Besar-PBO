@@ -215,6 +215,8 @@ public class Aplikasi{
                     String nmceo = in.nextLine();
                     System.out.print("Tanggal Dibuat : ");
                     String tgl = in.nextLine();
+                    Perusahaan tempP = new Perusahaan(nm,nmceo,tgl,id);
+                    menuSatu(tempP);
                     
                 case 2:
                     System.out.println("Input data Lowongan");
@@ -224,6 +226,8 @@ public class Aplikasi{
                     String jns = in.nextLine();
                     System.out.print("Requirements : ");
                     String req = in.nextLine();
+                    Lowongan tempL = new Lowongan(id, jns, req);
+                    menuDua(id, tempL);
                     
                 case 3:
                     System.out.println("Input data Pelamar");
@@ -233,6 +237,8 @@ public class Aplikasi{
                     String nmp = in.nextLine();
                     System.out.print("Tanggal : ");
                     String tglp = in.nextLine();
+                    Pelamar tempPel = new Pelamar(nmp,tglp,id);
+                    menuTiga(tempPel);
                     
                 case 4:
                     Perusahaan tempPer;
@@ -244,10 +250,11 @@ public class Aplikasi{
                     Lowongan tempLo;
                     System.out.println("ID Lowongan yang akan dihapus = ");
                     int tempIdl = in.nextInt();
-                    
+                                        
                 case 6:
                     System.out.println("ID Pelamar yang akan dihapus = ");
                     int tempIdpe = in.nextInt();
+                    deletePelamar(tempIdpe);
                     
                 case 7:
                     System.out.println("\tDaftar Perusahaan");
