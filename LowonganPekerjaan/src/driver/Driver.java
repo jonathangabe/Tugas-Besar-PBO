@@ -3,17 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view;
+package driver;
 
-import controller.controller;
+import controller.ControllerPerusahaan;
+import model.Aplikasi;
 
 /**
  *
  * @author Windows 7
  */
-public class driver {
+public class Driver {
     public static void main(String[] args) {
-        controller c = new controller();
+        Aplikasi app = new Aplikasi();
+        ControllerPerusahaan c = new ControllerPerusahaan(app);
         
     }
 }
