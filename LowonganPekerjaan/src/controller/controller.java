@@ -53,7 +53,49 @@ public class controller implements ActionListener{
             mp.setVisible(true);
             mu.setVisible(false);
         }
-        
+        if (x.equals(mu.getbtnPelamar())){
+                            
+        }
+        if (x.equals(mp.getBtnTambahPerusahaan())){
+            addP.setVisible(true);
+            mp.setVisible(false);
+        }
+        if (x.equals(mp.getBtnTambahLowongan())){
+            
+        }
+        if (x.equals(mp.getBtnHapusPerusahaan())){
+            delP.setVisible(true);
+            mp.setVisible(false);
+        }
+        if (x.equals(mp.getBtnHapusLowongan())){
+            
+        }
+        if (x.equals(mp.getBtnLihatPerusahaan())){
+            viewP.setVisible(true);
+            mp.setVisible(false);
+        }
+        if (x.equals(mp.getBtnLihatLowongan())){
+            
+        }
+        if (x.equals(mp.getBtnBack())){
+            mp.setVisible(false);
+            mu.setVisible(true);
+        }
+        if (x.equals(addP.getbtnBack())){
+            mp.setVisible(true);
+            addP.setVisible(false);
+        }
+        if (x.equals(delP.getBtnKembali())){
+            mp.setVisible(true);
+            delP.setVisible(false);
+        }
+        if (x.equals(viewP.getBtnKembali())){
+            mp.setVisible(true);
+            viewP.setVisible(false);
+        }
+        if (x.equals(addP.getbtnDaftar())){
+            
+        }
     }
     
 }

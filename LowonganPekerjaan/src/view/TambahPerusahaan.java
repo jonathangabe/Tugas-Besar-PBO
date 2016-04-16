@@ -59,8 +59,16 @@ public class TambahPerusahaan extends javax.swing.JFrame {
 
         jPanel1.setPreferredSize(new java.awt.Dimension(480, 480));
 
+        jPanel2.setBackground(new java.awt.Color(102, 102, 255));
+
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel4.setText("Nama Perusahaan ");
+
+        tfNamaPerusahaan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNamaPerusahaanActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel5.setText("Nama CEO ");
@@ -202,6 +210,10 @@ public class TambahPerusahaan extends javax.swing.JFrame {
     private void cbThnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbThnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbThnActionPerformed
+
+    private void tfNamaPerusahaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNamaPerusahaanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNamaPerusahaanActionPerformed
 
     /**
      * @param args the command line arguments
