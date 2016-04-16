@@ -8,6 +8,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import lowonganpekerjaan.Aplikasi;
+import lowonganpekerjaan.Perusahaan;
 import view.MenuPerusahaan;
 import view.MenuUtama;
 import view.RemovePerusahaan;
@@ -94,7 +95,12 @@ public class controller implements ActionListener{
             viewP.setVisible(false);
         }
         if (x.equals(addP.getbtnDaftar())){
-            
+            /*Object a = addP.getTfId();
+            Object b = addP.getTfNamaCEO();
+            Object c = addP.getTfNamaPerusahaan();
+            Object d = addP.getDate();
+            */
+            addP.reset();
         }
     }
     
