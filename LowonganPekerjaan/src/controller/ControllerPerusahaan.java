@@ -54,7 +54,9 @@ public class ControllerPerusahaan implements ActionListener{
         else if (x.equals(prs.getBtnTolak())){
             
         }
-        else if (x.equals(prs.getBtncari1())){
+        else if (x.equals(prs.getBtncari2())){
+            int id = prs.getTfcari2();
+            app.getPerusahaan(id);
             
         }
         else if (x.equals(prs.getBtnBack())){

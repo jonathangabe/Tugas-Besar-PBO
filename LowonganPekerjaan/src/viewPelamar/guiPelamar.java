@@ -42,6 +42,13 @@ public class guiPelamar extends javax.swing.JFrame {
         txcari = new javax.swing.JTextField();
         btncari = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        txLowongan = new javax.swing.JTextArea();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        listId1 = new javax.swing.JList();
+        btnBack1 = new javax.swing.JButton();
+        txcari1 = new javax.swing.JTextField();
+        btncari1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane25 = new javax.swing.JScrollPane();
         listPerusahaan = new javax.swing.JList<>();
@@ -90,10 +97,10 @@ public class guiPelamar extends javax.swing.JFrame {
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(btnBack)
                         .addGap(111, 111, 111)
-                        .addComponent(txcari, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
+                        .addComponent(txcari, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(btncari)
-                        .addGap(0, 89, Short.MAX_VALUE))
+                        .addGap(0, 57, Short.MAX_VALUE))
                     .addComponent(jScrollPane3))
                 .addContainerGap())
         );
@@ -129,15 +136,60 @@ public class guiPelamar extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(102, 102, 255));
 
+        txLowongan.setColumns(20);
+        txLowongan.setRows(5);
+        jScrollPane5.setViewportView(txLowongan);
+
+        jScrollPane6.setViewportView(listId1);
+
+        btnBack1.setText("Kembali");
+        btnBack1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBack1ActionPerformed(evt);
+            }
+        });
+
+        btncari1.setText("Cari");
+        btncari1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncari1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 648, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnBack1)
+                        .addGap(111, 111, 111)
+                        .addComponent(txcari1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btncari1)
+                        .addGap(0, 58, Short.MAX_VALUE))
+                    .addComponent(jScrollPane5))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 452, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 115, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBack1)
+                    .addComponent(txcari1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btncari1))
+                .addGap(94, 94, 94))
         );
 
         jTabbedPane1.addTab("View Lowongan", jPanel1);
@@ -172,6 +224,11 @@ public class guiPelamar extends javax.swing.JFrame {
         });
 
         btnDaftar.setText("Daftar");
+        btnDaftar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDaftarActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel6.setText("Alamat");
@@ -192,6 +249,11 @@ public class guiPelamar extends javax.swing.JFrame {
         jLabel1.setText("Pilih Perusahaan");
 
         btnBack2.setText("Kembali");
+        btnBack2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBack2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -314,7 +376,7 @@ public class guiPelamar extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
@@ -331,6 +393,22 @@ public class guiPelamar extends javax.swing.JFrame {
     private void namaPelamarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaPelamarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_namaPelamarActionPerformed
+
+    private void btnBack2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBack2ActionPerformed
+
+    private void btnDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDaftarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDaftarActionPerformed
+
+    private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBack1ActionPerformed
+
+    private void btncari1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncari1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncari1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -371,9 +449,11 @@ public class guiPelamar extends javax.swing.JFrame {
     private javax.swing.JTextField TTL;
     private javax.swing.JTextField almt;
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnBack1;
     private javax.swing.JButton btnBack2;
     private javax.swing.JButton btnDaftar;
     private javax.swing.JButton btncari;
+    private javax.swing.JButton btncari1;
     private javax.swing.JTextField email;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -388,41 +468,27 @@ public class guiPelamar extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane12;
-    private javax.swing.JScrollPane jScrollPane13;
-    private javax.swing.JScrollPane jScrollPane14;
-    private javax.swing.JScrollPane jScrollPane15;
-    private javax.swing.JScrollPane jScrollPane16;
-    private javax.swing.JScrollPane jScrollPane17;
-    private javax.swing.JScrollPane jScrollPane18;
-    private javax.swing.JScrollPane jScrollPane19;
-    private javax.swing.JScrollPane jScrollPane20;
-    private javax.swing.JScrollPane jScrollPane21;
-    private javax.swing.JScrollPane jScrollPane22;
-    private javax.swing.JScrollPane jScrollPane23;
-    private javax.swing.JScrollPane jScrollPane24;
     private javax.swing.JScrollPane jScrollPane25;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JList listId;
+    private javax.swing.JList listId1;
     private javax.swing.JList<String> listPerusahaan;
     private javax.swing.JTextField namaPelamar;
     private javax.swing.JTextField pekerjaan;
     private javax.swing.JTextField pendidikan;
     private javax.swing.JTextField telepon;
+    private javax.swing.JTextArea txLowongan;
     private javax.swing.JTextArea txPerusahaan1;
     private javax.swing.JTextField txcari;
+    private javax.swing.JTextField txcari1;
     // End of variables declaration//GEN-END:variables
 
+    
+    
     public JButton getBtnBack() {
         return btnBack;
     }
@@ -443,10 +509,25 @@ public class guiPelamar extends javax.swing.JFrame {
         this.txPerusahaan1 = txPerusahaan1;
     }
 
+    public JButton getBtnBack1() {
+        return btnBack1;
+    }
+
+    public JButton getBtncari1() {
+        return btncari1;
+    }
+
+    public void setTxLowongan(JTextArea txLowongan) {
+        this.txLowongan = txLowongan;
+    }
+
     public void addListener(ActionListener e){
         btnBack.addActionListener(e);
+        btnBack1.addActionListener(e);
         btnDaftar.addActionListener(e);
         btncari.addActionListener(e);
+        btncari1.addActionListener(e);
+        btnBack1.addActionListener(e);
         
     }
 }

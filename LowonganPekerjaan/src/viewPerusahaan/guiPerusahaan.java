@@ -53,6 +53,24 @@ public class guiPerusahaan extends javax.swing.JFrame {
         btnBack2 = new javax.swing.JButton();
         tfcari2 = new javax.swing.JTextField();
         btncari2 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        btnDaftar1 = new javax.swing.JButton();
+        jLabel27 = new javax.swing.JLabel();
+        btnBack1 = new javax.swing.JButton();
+        tfNamaPrshn1 = new javax.swing.JTextField();
+        tfNamaCEO1 = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel26 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txPerusahaan1 = new javax.swing.JTextArea();
+        btnBack4 = new javax.swing.JButton();
+        tfcari3 = new javax.swing.JTextField();
+        btncari3 = new javax.swing.JButton();
+        btnHapus1 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         txPerusahaan2 = new javax.swing.JTextArea();
@@ -92,14 +110,12 @@ public class guiPerusahaan extends javax.swing.JFrame {
             }
         });
 
-        tfIdPrshn.setText("jTextField4");
-
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap(140, Short.MAX_VALUE)
+                .addContainerGap(165, Short.MAX_VALUE)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addComponent(btnBack)
@@ -167,10 +183,26 @@ public class guiPerusahaan extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txPerusahaan);
 
         btnHapus.setText("Hapus");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusActionPerformed(evt);
+            }
+        });
 
         btnBack2.setText("Kembali");
 
+        tfcari2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfcari2ActionPerformed(evt);
+            }
+        });
+
         btncari2.setText("Cari");
+        btncari2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncari2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -222,6 +254,150 @@ public class guiPerusahaan extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Hapus Perusahaan", jPanel4);
 
+        jPanel2.setBackground(new java.awt.Color(102, 102, 255));
+
+        jPanel15.setBackground(new java.awt.Color(102, 102, 255));
+
+        jLabel24.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel24.setText("ID Lowongan");
+
+        btnDaftar1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        btnDaftar1.setText("Daftar");
+
+        jLabel27.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel27.setText("Persyaratan");
+
+        btnBack1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        btnBack1.setText("Kembali");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane3.setViewportView(jTextArea1);
+
+        jLabel26.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel26.setText("Jenis Pekerjaan");
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                .addContainerGap(170, Short.MAX_VALUE)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                        .addComponent(btnBack1)
+                        .addGap(381, 381, 381))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnDaftar1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel24)
+                                    .addComponent(jLabel27)
+                                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(39, 39, 39)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tfNamaPrshn1)
+                                    .addComponent(tfNamaCEO1)
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE))))
+                        .addGap(127, 127, 127))))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(tfNamaPrshn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfNamaCEO1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel26))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel27)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBack1)
+                    .addComponent(btnDaftar1))
+                .addContainerGap(129, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Tambah Lowongan", jPanel2);
+
+        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+
+        txPerusahaan1.setColumns(20);
+        txPerusahaan1.setRows(5);
+        jScrollPane2.setViewportView(txPerusahaan1);
+
+        btnBack4.setText("Kembali");
+
+        btncari3.setText("Cari");
+        btncari3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncari3ActionPerformed(evt);
+            }
+        });
+
+        btnHapus1.setText("Hapus");
+        btnHapus1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapus1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(btnBack4, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(138, 138, 138)
+                        .addComponent(tfcari3, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnHapus1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btncari3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(63, 63, 63))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBack4)
+                    .addComponent(tfcari3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btncari3))
+                .addGap(18, 18, 18)
+                .addComponent(btnHapus1)
+                .addGap(29, 29, 29))
+        );
+
+        jTabbedPane1.addTab("Hapus Lowongan", jPanel1);
+
         jPanel5.setBackground(new java.awt.Color(102, 102, 255));
 
         txPerusahaan2.setColumns(20);
@@ -245,7 +421,7 @@ public class guiPerusahaan extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel5Layout.createSequentialGroup()
@@ -288,11 +464,14 @@ public class guiPerusahaan extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
@@ -301,6 +480,26 @@ public class guiPerusahaan extends javax.swing.JFrame {
     private void tfTglActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTglActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfTglActionPerformed
+
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHapusActionPerformed
+
+    private void btncari3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncari3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncari3ActionPerformed
+
+    private void btnHapus1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapus1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHapus1ActionPerformed
+
+    private void btncari2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncari2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncari2ActionPerformed
+
+    private void tfcari2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfcari2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfcari2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -339,34 +538,52 @@ public class guiPerusahaan extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnBack1;
     private javax.swing.JButton btnBack2;
     private javax.swing.JButton btnBack3;
+    private javax.swing.JButton btnBack4;
     private javax.swing.JButton btnDaftar;
+    private javax.swing.JButton btnDaftar1;
     private javax.swing.JButton btnHapus;
+    private javax.swing.JButton btnHapus1;
     private javax.swing.JButton btnTerima;
     private javax.swing.JButton btnTolak;
     private javax.swing.JButton btncari;
     private javax.swing.JButton btncari2;
+    private javax.swing.JButton btncari3;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JList listId2;
     private javax.swing.JTextField tfIdPrshn;
     private javax.swing.JTextField tfNamaCEO;
+    private javax.swing.JTextField tfNamaCEO1;
     private javax.swing.JTextField tfNamaPrshn;
+    private javax.swing.JTextField tfNamaPrshn1;
     private javax.swing.JTextField tfTgl;
     private javax.swing.JTextField tfcari2;
+    private javax.swing.JTextField tfcari3;
     private javax.swing.JTextArea txPerusahaan;
+    private javax.swing.JTextArea txPerusahaan1;
     private javax.swing.JTextArea txPerusahaan2;
     private javax.swing.JTextField txcari;
     // End of variables declaration//GEN-END:variables
@@ -411,6 +628,38 @@ public class guiPerusahaan extends javax.swing.JFrame {
         return tfNamaCEO.getText();
     }
 
+    public JButton getBtnBack1() {
+        return btnBack1;
+    }
+
+    public JButton getBtnBack4() {
+        return btnBack4;
+    }
+
+    public JButton getBtnDaftar1() {
+        return btnDaftar1;
+    }
+
+    public JButton getBtncari() {
+        return btncari;
+    }
+
+    public JButton getBtncari2() {
+        return btncari2;
+    }
+
+    public JButton getBtncari3() {
+        return btncari3;
+    }
+
+    public JTextField getTfNamaCEO1() {
+        return tfNamaCEO1;
+    }
+
+    public JTextField getTfNamaPrshn1() {
+        return tfNamaPrshn1;
+    }
+
     public String getTfNamaPrshn() {
         return tfNamaPrshn.getText();
     }
@@ -419,8 +668,8 @@ public class guiPerusahaan extends javax.swing.JFrame {
         return tfTgl.getText();
     }
 
-    public String getTfcari2() {
-        return tfcari2.getText();
+    public int getTfcari2() {
+        return Integer.parseInt(tfcari2.getText());
     }
 
     public String getTxcari() {
@@ -437,13 +686,18 @@ public class guiPerusahaan extends javax.swing.JFrame {
 
     public void addListener(ActionListener e){
         btnBack.addActionListener(e);
+        btnBack1.addActionListener(e);
         btnBack2.addActionListener(e);
         btnBack3.addActionListener(e);
+        btnBack4.addActionListener(e);
         btnDaftar.addActionListener(e);
+        btnDaftar1.addActionListener(e);
         btnHapus.addActionListener(e);
+        btnHapus1.addActionListener(e);
         btnTerima.addActionListener(e);
         btnTolak.addActionListener(e);
         btncari.addActionListener(e);
         btncari2.addActionListener(e);
+        btncari3.addActionListener(e);
     }
 }
