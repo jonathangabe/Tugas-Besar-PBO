@@ -35,7 +35,9 @@ public class ControllerMMenu implements ActionListener {
             mu.dispose();
         } else if (x.equals(mu.getbtnPelamar())){
             ControllerPelamar cpl = new ControllerPelamar(app);
-            
+            mu.dispose();
+        }else if (x.equals(mu.getbtnOut())){
+            mu.dispose();
         }
     }
 }

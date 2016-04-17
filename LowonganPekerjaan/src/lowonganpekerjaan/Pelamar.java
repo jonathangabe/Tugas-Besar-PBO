@@ -15,7 +15,7 @@ public class Pelamar extends Orang{
         
         public BerkasLamaran getBerkas()
 	{
-		return berkas;
+            return berkas;
 	}
         
         public int getId()

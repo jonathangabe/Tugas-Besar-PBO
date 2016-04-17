@@ -72,18 +72,21 @@ public class ControllerPerusahaan implements ActionListener{
         }
         else if (x.equals(prs.getBtncari2())){
             int tempC2 = prs.getTfcari2();
+            Perusahaan ps;
+            ps = app.getDataPerusahaan(tempC2);
+            prs.setTxPerusahaan(ps.DataPerusahaan());
         }
         else if (x.equals(prs.getBtnBack())){
-            mu.setVisible(true);
-            prs.setVisible(false);
+            ControllerMMenu cm = new ControllerMMenu(app);
+            prs.dispose();
         }
         else if (x.equals(prs.getBtnBack2())){
-            mu.setVisible(true);
-            prs.setVisible(false);
+            ControllerMMenu cm = new ControllerMMenu(app);
+            prs.dispose();
         }
         else if (x.equals(prs.getBtnBack3())){
-            mu.setVisible(true);
-            prs.setVisible(false);
+            ControllerMMenu cm = new ControllerMMenu(app);
+            prs.dispose();
         }
     }
     

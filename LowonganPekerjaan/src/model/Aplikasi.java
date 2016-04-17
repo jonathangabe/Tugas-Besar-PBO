@@ -62,6 +62,7 @@ public class Aplikasi{
                 }
             }
         }
+        
 	public Pelamar getPelamar(int id)
 	{
 		Pelamar pl = null;
@@ -200,6 +201,15 @@ public class Aplikasi{
         public void menuTigaBelas()
         {
             
+        }
+        
+        public Perusahaan getDataPerusahaan(int id){
+            for (Perusahaan per: daftarPerusahaan){
+                if (per.getId() == id){
+                    return per;
+                }
+            }
+            return null;
         }
         
         public void mainMenu()

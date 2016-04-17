@@ -90,4 +90,11 @@ public class Perusahaan extends Orang{
         public ArrayList<Lowongan> getLowongan(){
             return daftarLowongan;
         }
+        
+        public String DataPerusahaan(){
+            return "Nama Perusahaan: "+getNameP()+
+                    "\nNama CEO: "+getName()+
+                    "\nID Perusahaan: "+getId()+
+                    "\nTanggal Terdaftar: "+getTanggal();
+        }
 }

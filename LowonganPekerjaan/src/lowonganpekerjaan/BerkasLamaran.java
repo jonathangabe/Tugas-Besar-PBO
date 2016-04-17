@@ -6,14 +6,13 @@ public class BerkasLamaran
 	private int idLamaran;
 	private String edukasi;
         private String status;
-	
-	public BerkasLamaran(int idLamaran,String edukasi,String Pengalaman,String status)
-	{
-		setIdLamaran(idLamaran);
-		setEdukasi(edukasi);
-		setPengalaman(Pengalaman);
-                setStatus(status);
-	}
+
+        public BerkasLamaran(int idLamaran, String Pengalaman, String edukasi, String status) {
+            this.idLamaran = idLamaran;
+            this.Pengalaman = Pengalaman;            
+            this.edukasi = edukasi;
+            this.status = status;
+        }	
         
 	public int getIdLamaran()
 	{
