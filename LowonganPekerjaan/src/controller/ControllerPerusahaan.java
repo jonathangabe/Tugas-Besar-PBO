@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import lowonganpekerjaan.BerkasLamaran;
 import lowonganpekerjaan.Lowongan;
+import lowonganpekerjaan.Pelamar;
 import model.Aplikasi;
 import lowonganpekerjaan.Perusahaan;
 
@@ -43,7 +44,7 @@ public class ControllerPerusahaan implements ActionListener{
             String tgl = prs.getTfTgl();
             int idp = prs.getTfIdPrshn();
             
-            Perusahaan p = new Perusahaan(name, name, tgl, idp);
+            Perusahaan p = new Perusahaan(namap, name, tgl, idp);
             app.addPerusahaan(p);
             
             JOptionPane.showMessageDialog(prs, "Perusahaan Berhasil di Tambah");
@@ -68,6 +69,7 @@ public class ControllerPerusahaan implements ActionListener{
         }
         else if (x.equals(prs.getBtncari())){
             int tempC1 = prs.getTfcari();
+            app.getPelamar(tempC1);
             
         }
         else if (x.equals(prs.getBtncari2())){

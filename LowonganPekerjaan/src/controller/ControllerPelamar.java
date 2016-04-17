@@ -56,12 +56,12 @@ public class ControllerPelamar implements ActionListener {
             app.menuSepuluh(tempC);
         }
         else if (x.equals(plm.getBtnBack())){
-            mu.setVisible(true);
-            plm.setVisible(false);
+            ControllerMMenu cm = new ControllerMMenu(app);
+            plm.dispose();
         }
         else if (x.equals(plm.getBtnBack2())){
-            mu.setVisible(true);
-            plm.setVisible(false);
+            ControllerMMenu cm = new ControllerMMenu(app);
+            plm.dispose();
         }
     }
        

@@ -70,26 +70,32 @@ public class guiPerusahaan extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         btnTerima = new javax.swing.JButton();
         btnTolak = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txDataPelamar = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
+        tfIdPerusahaan = new javax.swing.JTextField();
+        tfIdLowongan = new javax.swing.JTextField();
+        tfIdBerkas = new javax.swing.JTextField();
+        btnCari3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jTabbedPane1.setBackground(new java.awt.Color(0, 0, 0));
+        setBackground(new java.awt.Color(0, 0, 0));
 
         jPanel14.setBackground(new java.awt.Color(102, 102, 255));
 
-        jLabel20.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel20.setText("Nama Perusahaan ");
 
-        jLabel21.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel21.setText("Nama CEO ");
 
-        jLabel22.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel22.setText("Tanggal Berdiri ");
 
         btnDaftar.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         btnDaftar.setText("Daftar");
 
-        jLabel23.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel23.setText("ID Perusahaan");
 
         btnBack.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
@@ -151,7 +157,7 @@ public class guiPerusahaan extends javax.swing.JFrame {
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBack)
                     .addComponent(btnDaftar))
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -185,6 +191,7 @@ public class guiPerusahaan extends javax.swing.JFrame {
 
         btncari2.setText("Cari");
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Input ID Perusahaan");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -192,24 +199,29 @@ public class guiPerusahaan extends javax.swing.JFrame {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnBack2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tfcari2, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel2))
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addComponent(btncari2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(57, 57, 57)
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tfcari2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel2))
+                                .addGap(19, 19, 19))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                                .addComponent(btnHapus)
-                                .addGap(19, 19, 19)))
-                        .addGap(31, 31, 31)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(56, Short.MAX_VALUE))
+                                .addGap(70, 70, 70)
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                                        .addComponent(btncari2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(53, 53, 53))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                                        .addComponent(btnHapus)
+                                        .addGap(32, 32, 32)))))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(btnBack2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,7 +237,7 @@ public class guiPerusahaan extends javax.swing.JFrame {
                         .addComponent(tfcari2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btncari2)
-                        .addGap(54, 54, 54)
+                        .addGap(51, 51, 51)
                         .addComponent(btnHapus)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
@@ -301,6 +313,7 @@ public class guiPerusahaan extends javax.swing.JFrame {
 
         btncari.setText("Cari");
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Input ID Pelamar");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -315,16 +328,13 @@ public class guiPerusahaan extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addContainerGap(70, Short.MAX_VALUE)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                .addComponent(tfcari, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                .addComponent(btncari)
-                                .addGap(88, 88, 88))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(70, 70, 70)))
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel1)
+                            .addComponent(tfcari, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(btncari)))
+                        .addGap(49, 49, 49)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(48, 48, 48))
         );
         jPanel5Layout.setVerticalGroup(
@@ -354,6 +364,15 @@ public class guiPerusahaan extends javax.swing.JFrame {
 
         btnTolak.setText("Tolak");
 
+        txDataPelamar.setColumns(20);
+        txDataPelamar.setRows(5);
+        jScrollPane2.setViewportView(txDataPelamar);
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel3.setText("Input ID");
+
+        btnCari3.setText("Cari");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -363,12 +382,37 @@ public class guiPerusahaan extends javax.swing.JFrame {
                 .addComponent(btnTerima)
                 .addGap(75, 75, 75)
                 .addComponent(btnTolak)
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCari3)
+                    .addComponent(tfIdPerusahaan)
+                    .addComponent(tfIdLowongan)
+                    .addComponent(tfIdBerkas))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(350, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(36, 36, 36)
+                        .addComponent(tfIdPerusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(tfIdLowongan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(tfIdBerkas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(btnCari3)
+                        .addGap(0, 48, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTerima)
                     .addComponent(btnTolak))
@@ -440,6 +484,7 @@ public class guiPerusahaan extends javax.swing.JFrame {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnBack2;
     private javax.swing.JButton btnBack3;
+    private javax.swing.JButton btnCari3;
     private javax.swing.JButton btnDaftar;
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnTerima;
@@ -452,6 +497,7 @@ public class guiPerusahaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
@@ -462,17 +508,22 @@ public class guiPerusahaan extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
+    private javax.swing.JTextField tfIdBerkas;
+    private javax.swing.JTextField tfIdLowongan;
+    private javax.swing.JTextField tfIdPerusahaan;
     private javax.swing.JTextField tfIdPrshn;
     private javax.swing.JTextField tfNamaCEO;
     private javax.swing.JTextField tfNamaPrshn;
     private javax.swing.JTextField tfTgl;
     private javax.swing.JTextField tfcari;
     private javax.swing.JTextField tfcari2;
+    private javax.swing.JTextArea txDataPelamar;
     private javax.swing.JTextArea txPerusahaan;
     private javax.swing.JTextArea txPerusahaan2;
     // End of variables declaration//GEN-END:variables
@@ -541,8 +592,8 @@ public class guiPerusahaan extends javax.swing.JFrame {
         txPerusahaan.setText(s);
     }
 
-    public void setTxPerusahaan2(String txPerusahaan2) {
-        this.txPerusahaan2.setText(txPerusahaan2);
+    public void setTxPerusahaan2(String s2) {
+        txPerusahaan2.setText(s2);
     }
 
     public void addListener(ActionListener e){
@@ -555,5 +606,7 @@ public class guiPerusahaan extends javax.swing.JFrame {
         btnTolak.addActionListener(e);
         btncari.addActionListener(e);
         btncari2.addActionListener(e);
+        btnCari3.addActionListener(e);
+        
     }
 }
