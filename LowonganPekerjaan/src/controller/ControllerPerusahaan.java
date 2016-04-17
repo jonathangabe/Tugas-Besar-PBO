@@ -51,6 +51,8 @@ public class ControllerPerusahaan implements ActionListener{
         else if (x.equals(prs.getBtnTerima())){
             String b = "Diterima";
             app.setStatusBerkas(0, 0, 0, b);
+            
+            JOptionPane.showMessageDialog(prs, "Pelamar Diterima");
         }
         else if (x.equals(prs.getBtnHapus())){
             int cid = prs.getTfIdPrshn();
@@ -61,6 +63,8 @@ public class ControllerPerusahaan implements ActionListener{
         else if (x.equals(prs.getBtnTolak())){
             String tolak = "Ditolak";
             app.setStatusBerkas(0, 0, 0, tolak);
+            
+            JOptionPane.showMessageDialog(prs, "Pelamar Ditolak");
         }
         else if (x.equals(prs.getBtncari())){
             int tempC1 = prs.getTfcari();
