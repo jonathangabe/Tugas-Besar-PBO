@@ -7,7 +7,10 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import lowonganpekerjaan.BerkasLamaran;
+import lowonganpekerjaan.Lowongan;
 import model.Aplikasi;
 import lowonganpekerjaan.Perusahaan;
 
@@ -19,7 +22,7 @@ import viewPerusahaan.guiPerusahaan;
  * @author Windows 7
  */
 public class ControllerPerusahaan implements ActionListener{
-    
+    MenuUtama mu;
     guiPerusahaan prs;
     Aplikasi app = new Aplikasi();
  
@@ -46,25 +49,37 @@ public class ControllerPerusahaan implements ActionListener{
             JOptionPane.showMessageDialog(prs, "Perusahaan Berhasil di Tambah");
         } 
         else if (x.equals(prs.getBtnTerima())){
-            
+            String b = "Diterima";
+            app.setStatusBerkas(0, 0, 0, b);
         }
         else if (x.equals(prs.getBtnHapus())){
+            int cid = prs.getTfIdPrshn();
+            app.deletePerusahaan(cid);
             
+            JOptionPane.showMessageDialog(prs, "Perusahaan Telah di Hapus");
         }
         else if (x.equals(prs.getBtnTolak())){
+            String tolak = "Ditolak";
+            app.setStatusBerkas(0, 0, 0, tolak);
+        }
+        else if (x.equals(prs.getBtncari())){
+            int tempC1 = prs.getTfcari();
             
         }
-        else if (x.equals(prs.getBtncari1())){
-            
+        else if (x.equals(prs.getBtncari2())){
+            int tempC2 = prs.getTfcari2();
         }
         else if (x.equals(prs.getBtnBack())){
-            
+            mu.setVisible(true);
+            prs.setVisible(false);
         }
         else if (x.equals(prs.getBtnBack2())){
-            
+            mu.setVisible(true);
+            prs.setVisible(false);
         }
         else if (x.equals(prs.getBtnBack3())){
-            
+            mu.setVisible(true);
+            prs.setVisible(false);
         }
     }
     

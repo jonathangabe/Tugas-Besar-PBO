@@ -10,9 +10,8 @@ public class Lowongan{
 	private int nBerkasM=0;
 	private int nBerkasD=0;
 	private int idLowongan;
-        //int maxMasuk=10;
-        //int maxTerima=10;
-	
+        private String approval;
+        
 	public Lowongan(int id, String jenisKerja, String req)
 	{
 		idLowongan=id;
@@ -29,7 +28,15 @@ public class Lowongan{
         {
             return requirement;
         }
-        
+
+        public void setApproval(String approval) {
+            this.approval = approval;
+        }
+
+        public String getApproval() {
+            return approval;
+        }
+                
 	public void addBerkas(BerkasLamaran bl)
 	{
 		berkasMasuk.add(bl);
@@ -97,5 +104,9 @@ public class Lowongan{
 	public int getId()
 	{
             return idLowongan;
+        }
+        
+        public ArrayList<BerkasLamaran> getBerkas(){
+            return berkasMasuk;
         }
 }

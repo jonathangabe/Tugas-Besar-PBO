@@ -17,6 +17,7 @@ import viewPerusahaan.guiPerusahaan;
  * @author Windows 7
  */
 public class ControllerPelamar implements ActionListener {
+    MenuUtama mu;
     guiPelamar plm;
     Aplikasi app = new Aplikasi();
 

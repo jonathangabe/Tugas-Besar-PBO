@@ -86,4 +86,8 @@ public class Perusahaan extends Orang{
             nLowongan=this.daftarLowongan.size();
             return nLowongan;
         }
+        
+        public ArrayList<Lowongan> getLowongan(){
+            return daftarLowongan;
+        }
 }

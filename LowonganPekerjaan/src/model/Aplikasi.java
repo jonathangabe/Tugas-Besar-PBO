@@ -6,6 +6,7 @@
 package model;
 import java.util.ArrayList;
 import java.util.Scanner;
+import lowonganpekerjaan.BerkasLamaran;
 import lowonganpekerjaan.Lowongan;
 import lowonganpekerjaan.Pelamar;
 import lowonganpekerjaan.Perusahaan;
@@ -42,6 +43,25 @@ public class Aplikasi{
                 return p;
 	}
 	
+        public void setStatusBerkas (int id, int idx,int idb,String b){
+            for (Perusahaan p : daftarPerusahaan){
+                if (p.getId()==id){
+                    ArrayList<Lowongan> l = new ArrayList();
+                    l=p.getLowongan();
+                    for(Lowongan s:l){
+                        if(s.getId()==idx){
+                            ArrayList<BerkasLamaran> bs = new ArrayList();
+                            bs=s.getBerkas();
+                            for(BerkasLamaran bsc : bs){
+                                if(bsc.getIdLamaran()==idb){
+                                    bsc.setStatus(b);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 	public Pelamar getPelamar(int id)
 	{
 		Pelamar pl = null;
@@ -146,10 +166,7 @@ public class Aplikasi{
             {
                 System.out.println("ID Pelamar: "+daftarPelamar.get(i).getId());
                 System.out.println("Nama Pelamar: "+daftarPelamar.get(i).getName());
-                System.out.println("Status: "+daftarPelamar.get(i).getApproval());
-                System.out.println("Edukasi: "+daftarPelamar.get(i).getBerkas().getedukasi());
-                System.out.println("Pengalaman: "+daftarPelamar.get(i).getBerkas().getPengalaman());
-                System.out.println("Alasan Mendaftar: "+daftarPelamar.get(i).getBerkas().getReason());
+                //System.out.println("Status: "+daftarPelamar.get(i).getApproval());             
             }
         }
         
@@ -175,10 +192,9 @@ public class Aplikasi{
         {
             System.out.println("ID Pelamar: "+getPelamar(id).getId());
             System.out.println("Nama Pelamar: "+getPelamar(id).getName());
-            System.out.println("Status: "+getPelamar(id).getApproval());
-            System.out.println("Edukasi: "+getPelamar(id).getBerkas().getedukasi());
+            //System.out.println("Status: "+getPelamar(id).getApproval());
+            System.out.println("Edukasi: "+getPelamar(id).getBerkas().getEdukasi());
             System.out.println("Pengalaman: "+getPelamar(id).getBerkas().getPengalaman());
-            System.out.println("Alasan Mendaftar: "+getPelamar(id).getBerkas().getReason());
         }
         
         public void menuTigaBelas()
@@ -242,8 +258,8 @@ public class Aplikasi{
                     String nmp = in.nextLine();
                     System.out.print("Tanggal : ");
                     String tglp = in.nextLine();
-                    Pelamar tempPel = new Pelamar(nmp,tglp,id);
-                    menuTiga(tempPel);
+                    //Pelamar tempPel = new Pelamar(nmp,tglp,id);
+                    //menuTiga(tempPel);
                     
                 case 4:
                     Perusahaan tempPer;

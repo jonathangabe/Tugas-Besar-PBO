@@ -5,46 +5,51 @@ public class BerkasLamaran
 	private String Pengalaman;
 	private int idLamaran;
 	private String edukasi;
-	private String reason;
+        private String status;
 	
-	public BerkasLamaran(int idLamaran,String edukasi,String Pengalaman,String reason)
+	public BerkasLamaran(int idLamaran,String edukasi,String Pengalaman,String status)
 	{
 		setIdLamaran(idLamaran);
 		setEdukasi(edukasi);
 		setPengalaman(Pengalaman);
-		setReason(reason);
-	
+                setStatus(status);
 	}
+        
 	public int getIdLamaran()
 	{
 		return idLamaran;
 	}
+        
 	public void setIdLamaran(int idLamaran)
 	{
 		this.idLamaran=idLamaran;
 	}
-	public String getedukasi()
-	{
-		return edukasi;
-	}
+	
 	public void setEdukasi(String edukasi)
 	{
 		this.edukasi=edukasi;
 	}
+        
 	public String getPengalaman()
 	{
 		return Pengalaman;
 	}
+        
 	public void setPengalaman(String Pengalaman)
 	{
 		this.Pengalaman=Pengalaman;
 	}
-	public String getReason()
-	{
-		return reason;
-	}
-	public void setReason(String reason)
-	{
-		this.reason=reason;
-	}
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
+
+        public String getEdukasi() {
+            return edukasi;
+        }
+
+        public String getStatus() {
+            return status;
+        }       
+
 }

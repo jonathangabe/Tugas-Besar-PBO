@@ -3,16 +3,12 @@ package lowonganpekerjaan;
 public class Pelamar extends Orang{
 	private BerkasLamaran berkas;
         private int idPelamar;
-	private String approval;
 
-	public Pelamar(String name, String tanggal, int id){
+	public Pelamar(String name, String tanggal, int idPelamar){
             super(name, tanggal);
-            //setApproval(approval);
-            idPelamar=id;
+            this.idPelamar = idPelamar;
 	}
-        
-        
-        
+                
 	public void createBerkas(BerkasLamaran bl){
             berkas = bl;
 	}
@@ -20,14 +16,6 @@ public class Pelamar extends Orang{
         public BerkasLamaran getBerkas()
 	{
 		return berkas;
-	}
-
-	public void setApproval(String approval){
-            this.approval = approval;		
-	}
-
-	public String getApproval(){
-            return approval;
 	}
         
         public int getId()
