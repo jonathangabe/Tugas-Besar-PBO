@@ -9,7 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import lowonganpekerjaan.BerkasLamaran;
+import lowonganpekerjaan.Lowongan;
 import lowonganpekerjaan.Pelamar;
+import lowonganpekerjaan.Perusahaan;
 import model.Aplikasi;
 import viewMenu.MenuUtama;
 import viewPelamar.guiPelamar;
@@ -23,6 +25,8 @@ public class ControllerPelamar implements ActionListener {
     MenuUtama mu;
     guiPelamar plm;
     Aplikasi app = new Aplikasi();
+    Perusahaan p;
+    Lowongan l;
 
     ControllerPelamar(Aplikasi apps) {
         plm = new guiPelamar();
@@ -46,14 +50,10 @@ public class ControllerPelamar implements ActionListener {
             Pelamar p = new Pelamar(pnama, ptgl, pid);
             BerkasLamaran bl = new BerkasLamaran(lid, pkrj, pend, "");            
             app.addPelamar(p);
+            plm.Reset();
             
             JOptionPane.showMessageDialog(plm, "Pelamar Berhasil Mendaftar");
-        }
-        
-        else if (x.equals(plm.getBtnCari())){
-            int tempC = plm.getTfCariLowongan();            
-            app.menuSepuluh(tempC);
-        }
+        }        
         
         else if (x.equals(plm.getBtnBack())){
             ControllerMMenu cm = new ControllerMMenu(app);
@@ -65,7 +65,25 @@ public class ControllerPelamar implements ActionListener {
             plm.dispose();
         }
         
+        else if (x.equals(plm.getBtnBack3())){
+            ControllerMMenu cm = new ControllerMMenu(app);
+            plm.dispose();
+        }
+        else if (x.equals(plm.getBtnBack4())){
+            ControllerMMenu cm = new ControllerMMenu(app);
+            plm.dispose();
+        }
         
+        else if (x.equals(plm.getBtnInfo())){
+            
+        }
+        
+        else if (x.equals(plm.getBtnLihatLowongan())){
+            
+        }
+        else if (x.equals(plm.getBtnLihatPerusahaan())){
+            
+        }
     }
        
 }
