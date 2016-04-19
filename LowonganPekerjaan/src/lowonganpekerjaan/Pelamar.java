@@ -22,4 +22,10 @@ public class Pelamar extends Orang{
         {
             return idPelamar;
         }
+        
+        public String DataPelamar(){
+            return "Nama Pelamar: "+getName()+                 
+                    "\nID Pelamar: "+getId()+
+                    "\nTanggal Mendaftar: "+getTanggal();
+        }
 }

@@ -44,25 +44,28 @@ public class ControllerPelamar implements ActionListener {
             String pkrj = plm.getTfPekerjaan();
             
             Pelamar p = new Pelamar(pnama, ptgl, pid);
-            BerkasLamaran bl = new BerkasLamaran(lid, pkrj, pend, "");
-            
+            BerkasLamaran bl = new BerkasLamaran(lid, pkrj, pend, "");            
             app.addPelamar(p);
             
             JOptionPane.showMessageDialog(plm, "Pelamar Berhasil Mendaftar");
-        } 
-        else if (x.equals(plm.getBtncari())){
-            int tempC = plm.getTxcari();
-            
+        }
+        
+        else if (x.equals(plm.getBtnCari())){
+            int tempC = plm.getTfCariLowongan();            
             app.menuSepuluh(tempC);
         }
+        
         else if (x.equals(plm.getBtnBack())){
             ControllerMMenu cm = new ControllerMMenu(app);
             plm.dispose();
         }
+        
         else if (x.equals(plm.getBtnBack2())){
             ControllerMMenu cm = new ControllerMMenu(app);
             plm.dispose();
         }
+        
+        
     }
        
 }

@@ -97,4 +97,8 @@ public class Perusahaan extends Orang{
                     "\nID Perusahaan: "+getId()+
                     "\nTanggal Terdaftar: "+getTanggal();
         }
+        
+        public String IDPerusahaan(){
+            return "ID Perusahaan: "+getId();
+        }
 }

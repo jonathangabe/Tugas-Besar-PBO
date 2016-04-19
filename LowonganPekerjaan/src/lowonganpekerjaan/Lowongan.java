@@ -11,14 +11,13 @@ public class Lowongan{
 	private int nBerkasD=0;
 	private int idLowongan;
         private String approval;
+
+        public Lowongan(String jenisPekerjaan, String requirement, int idLowongan) {
+            this.jenisPekerjaan = jenisPekerjaan;
+            this.requirement = requirement;
+            this.idLowongan = idLowongan;
+        }
         
-	public Lowongan(int id, String jenisKerja, String req)
-	{
-		idLowongan=id;
-		jenisPekerjaan=jenisKerja;
-		requirement=req;
-	}
-	
         public String getJenis()
         {
             return jenisPekerjaan;
@@ -29,13 +28,17 @@ public class Lowongan{
             return requirement;
         }
 
-        public void setApproval(String approval) {
+        public int getId() {
+            return idLowongan;
+        }
+        
+        /*public void setApproval(String approval) {
             this.approval = approval;
         }
 
         public String getApproval() {
             return approval;
-        }
+        }*/
                 
 	public void addBerkas(BerkasLamaran bl)
 	{
@@ -101,12 +104,13 @@ public class Lowongan{
                 return bl;
 	}
 	
-	public int getId()
-	{
-            return idLowongan;
-        }
-        
         public ArrayList<BerkasLamaran> getBerkas(){
             return berkasMasuk;
+        }
+        
+        public String DataLowongan(){
+            return "ID Lowongan: "+getId()+                 
+                    "\nJenis Lowongan: "+getJenis()+
+                    "\nRequirement: "+getReq();
         }
 }

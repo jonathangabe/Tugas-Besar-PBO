@@ -17,6 +17,7 @@ import lowonganpekerjaan.Perusahaan;
 public class Aplikasi{
 	private ArrayList<Perusahaan> daftarPerusahaan = new ArrayList<Perusahaan>();
 	private ArrayList<Pelamar> daftarPelamar = new ArrayList<Pelamar>();
+        private ArrayList<Lowongan> daftarLowongan = new ArrayList<Lowongan>();
 	private int nPerusahaan=0;
         private int nPelamar=0;
         Scanner in = new Scanner(System.in);
@@ -24,23 +25,27 @@ public class Aplikasi{
         
 	public void addPerusahaan(Perusahaan p)
 	{
-		daftarPerusahaan.add(p);
+            daftarPerusahaan.add(p);
 	}
 	
 	public void addPelamar(Pelamar pl)
 	{
-		daftarPelamar.add(pl);
+            daftarPelamar.add(pl);
 	}
 	
+        public void addLowongan (Lowongan l){
+            daftarLowongan.add(l);
+        }
+        
 	public Perusahaan getPerusahaan(int id)
 	{
-		Perusahaan p = null;
+            Perusahaan p = null;
             for (int i=0;i<daftarPerusahaan.size();i++){
                 if (id==daftarPerusahaan.get(i).getId()){
                     p=daftarPerusahaan.get(i);
                 }
             }
-                return p;
+            return p;
 	}
 	
         public void setStatusBerkas (int id, int idx,int idb,String b){
@@ -62,6 +67,16 @@ public class Aplikasi{
                 }
             }
         }
+        
+        public Lowongan getLowongan(int idl){
+            Lowongan l = null;
+            for (int i=0; i<daftarLowongan.size(); i++){
+                if (idl==daftarLowongan.get(i).getId()){
+                    l=daftarLowongan.get(i);
+                }
+            }
+            return l;
+        } 
         
 	public Pelamar getPelamar(int id)
 	{
@@ -175,8 +190,9 @@ public class Aplikasi{
         {
             System.out.println("ID Perusahaan: "+getPerusahaan(id).getId());
             System.out.println("Nama Perusahaan: "+getPerusahaan(id).getNameP());
+            System.out.println("Nama CEO: "+getPerusahaan(id).getName());
             System.out.println("Jumlah Lowongan: "+getPerusahaan(id).jumlahLowongan());
-            System.out.println("CEO: "+getPerusahaan(id).getName());
+            
         }
         
         public void menuSebelas(int id)
@@ -257,7 +273,7 @@ public class Aplikasi{
                     String jns = in.nextLine();
                     System.out.print("Requirements : ");
                     String req = in.nextLine();
-                    Lowongan tempL = new Lowongan(tempIdl, jns, req);
+                    Lowongan tempL = new Lowongan(jns, req, id);
                     menuDua(id, tempL);
                     
                 case 3:
