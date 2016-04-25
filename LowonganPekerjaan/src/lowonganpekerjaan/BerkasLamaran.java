@@ -49,6 +49,6 @@ public class BerkasLamaran
 
         public String getStatus() {
             return status;
-        }       
+        }      
 
 }

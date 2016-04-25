@@ -22,7 +22,7 @@ public class Perusahaan extends Orang{
 	
 	public Lowongan getLowonganidx(int idx)
 	{
-		return daftarLowongan.get(idx);
+            return daftarLowongan.get(idx);
 	}
 	
 	public Lowongan getLowonganid(int id)

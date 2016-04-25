@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Lowongan{
 	private ArrayList<BerkasLamaran> berkasMasuk = new ArrayList<BerkasLamaran>();
-	private ArrayList<BerkasLamaran> berkasDiterima = new ArrayList<BerkasLamaran>(); 
+	private ArrayList<BerkasLamaran> berkasDiterima = null; 
 	private String jenisPekerjaan;
 	private String requirement;
 	private int nBerkasM=0;
@@ -61,7 +61,7 @@ public class Lowongan{
                 return bl;
 	}
 	
-	public void berkasDiterimaIdx(int id)
+	public void berkasDiterimaId(int id)
 	{
             berkasDiterima.add(getBerkasMid(id));
             removeBerkasMasuk(id);

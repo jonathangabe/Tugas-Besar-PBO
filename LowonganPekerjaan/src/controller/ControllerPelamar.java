@@ -47,8 +47,8 @@ public class ControllerPelamar implements ActionListener {
             String pend = plm.getTfPendidikan();
             String pkrj = plm.getTfPekerjaan();
             
-            Pelamar p = new Pelamar(pnama, ptgl, pid);
-            BerkasLamaran bl = new BerkasLamaran(lid, pkrj, pend, "");            
+            BerkasLamaran bl = new BerkasLamaran(lid, pkrj, pend, "");   
+            Pelamar p = new Pelamar(pnama, ptgl, pid,bl);         
             app.addPelamar(p);
             plm.Reset();
             
@@ -75,14 +75,24 @@ public class ControllerPelamar implements ActionListener {
         }
         
         else if (x.equals(plm.getBtnInfo())){
-            
+            int idp = plm.getTfCariLamaran();
+            plm.setTxInfoPelamar(app.getPelamar(idp).getBerkas().getStatus());
         }
         
         else if (x.equals(plm.getBtnLihatLowongan())){
-            
+            for (int i=0;i<app.jumlahPerusahaan();i++)    
+            {
+                for (int j=0;j<app.getPerusahaanIdx(i).jumlahLowongan();j++) 
+                {
+                    plm.setTxLowongan(app.getPerusahaanIdx(i).getLowonganidx(j).DataLowongan());
+                }
+            }
         }
         else if (x.equals(plm.getBtnLihatPerusahaan())){
-            
+            for (int i=0;i<app.jumlahPerusahaan();i++)    
+            {
+              plm.setTxPerusahaan(app.getPerusahaanIdx(i).DataPerusahaan());
+            }
         }
     }
        

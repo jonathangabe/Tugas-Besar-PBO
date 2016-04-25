@@ -455,6 +455,18 @@ public class guiPelamar extends javax.swing.JFrame {
         txLowongan.setText(s);
     }
 
+    public void setTxInfoPelamar(JTextArea txInfoPelamar) {
+        this.txInfoPelamar = txInfoPelamar;
+    }
+
+    public void setTxLowongan(JTextArea txLowongan) {
+        this.txLowongan = txLowongan;
+    }
+
+    public void setTxPerusahaan(JTextArea txPerusahaan) {
+        this.txPerusahaan = txPerusahaan;
+    }
+
     public void setTxPerusahaan(String s) {
         txPerusahaan.setText(s);
     }
@@ -466,6 +478,8 @@ public class guiPelamar extends javax.swing.JFrame {
         btnBack4.addActionListener(e);
         btnDaftar.addActionListener(e);
         btnInfo.addActionListener(e);
+        btnLihatPerusahaan.addActionListener(e);
+        btnLihatLowongan.addActionListener(e);
     }
     
     public void Reset(){

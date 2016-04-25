@@ -4,9 +4,10 @@ public class Pelamar extends Orang{
 	private BerkasLamaran berkas;
         private int idPelamar;
 
-	public Pelamar(String name, String tanggal, int idPelamar){
+	public Pelamar(String name, String tanggal, int idPelamar, BerkasLamaran bl){
             super(name, tanggal);
             this.idPelamar = idPelamar;
+            berkas = bl;
 	}
                 
 	public void createBerkas(BerkasLamaran bl){
