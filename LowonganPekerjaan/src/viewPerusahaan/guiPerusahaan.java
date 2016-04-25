@@ -68,6 +68,8 @@ public class guiPerusahaan extends javax.swing.JFrame {
         tfRequirement = new javax.swing.JTextField();
         btnBack4 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        tfIdPrshn1 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         btnCari2 = new javax.swing.JButton();
@@ -87,25 +89,13 @@ public class guiPerusahaan extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         btnTerima = new javax.swing.JButton();
         btnTolak = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txDataLowongan = new javax.swing.JTextArea();
-        jLabel3 = new javax.swing.JLabel();
-        tfIdPerusahaan = new javax.swing.JTextField();
-        tfIdLowongan = new javax.swing.JTextField();
-        tfIdBerkas = new javax.swing.JTextField();
-        btnCariPerusahaan = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        txDataBerkas = new javax.swing.JTextArea();
-        jLabel9 = new javax.swing.JLabel();
-        btnCariLowongan = new javax.swing.JButton();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        txDataPelamar = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
         txPelamar2 = new javax.swing.JTextArea();
         jLabel10 = new javax.swing.JLabel();
-        btnCariPelamar = new javax.swing.JButton();
         btnBack6 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        tfCariIDPelamar1 = new javax.swing.JTextField();
+        btnCari4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -232,6 +222,11 @@ public class guiPerusahaan extends javax.swing.JFrame {
         });
 
         btnCari1.setText("Cari Perusahaan");
+        btnCari1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCari1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Input ID Perusahaan");
@@ -318,10 +313,31 @@ public class guiPerusahaan extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setText("Requirement");
 
+        tfIDLowongan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfIDLowonganActionPerformed(evt);
+            }
+        });
+
+        tfJenisLowongan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfJenisLowonganActionPerformed(evt);
+            }
+        });
+
         btnBack4.setText("Kembali");
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel12.setText("REGISTRASI LOWONGAN PEKERJAAN");
+
+        jLabel24.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel24.setText("ID Perusahaan");
+
+        tfIdPrshn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfIdPrshn1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -339,15 +355,18 @@ public class guiPerusahaan extends javax.swing.JFrame {
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel5)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jLabel24))
                         .addGap(67, 67, 67)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(tfJenisLowongan)
                             .addComponent(tfRequirement)
-                            .addComponent(tfIDLowongan, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(tfIDLowongan, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                            .addComponent(tfIdPrshn1))))
                 .addGap(168, 168, 168))
         );
         jPanel1Layout.setVerticalGroup(
@@ -355,15 +374,20 @@ public class guiPerusahaan extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addComponent(jLabel12)
-                .addGap(42, 42, 42)
+                .addGap(12, 12, 12)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(tfIdPrshn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel5))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
                         .addComponent(tfIDLowongan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(tfJenisLowongan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -386,11 +410,22 @@ public class guiPerusahaan extends javax.swing.JFrame {
 
         btnCari2.setText("Cari Lowongan");
 
+        tfCariIDLowongan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfCariIDLowonganActionPerformed(evt);
+            }
+        });
+
         txLowongan.setColumns(20);
         txLowongan.setRows(5);
         jScrollPane3.setViewportView(txLowongan);
 
         btnHapusLowongan.setText("Hapus Lowongan");
+        btnHapusLowongan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusLowonganActionPerformed(evt);
+            }
+        });
 
         btnBack5.setText("Kembali");
 
@@ -511,31 +546,6 @@ public class guiPerusahaan extends javax.swing.JFrame {
 
         btnTolak.setText("Tolak");
 
-        txDataLowongan.setColumns(20);
-        txDataLowongan.setRows(5);
-        jScrollPane2.setViewportView(txDataLowongan);
-
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Input ID Perusahaan");
-
-        btnCariPerusahaan.setText("Cari Perusahaan");
-
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel8.setText("Input ID Lowongan");
-
-        txDataBerkas.setColumns(20);
-        txDataBerkas.setRows(5);
-        jScrollPane4.setViewportView(txDataBerkas);
-
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel9.setText("Input ID Berkas");
-
-        btnCariLowongan.setText("Cari Lowongan");
-
-        txDataPelamar.setColumns(20);
-        txDataPelamar.setRows(5);
-        jScrollPane6.setViewportView(txDataPelamar);
-
         txPelamar2.setColumns(20);
         txPelamar2.setRows(5);
         jScrollPane7.setViewportView(txPelamar2);
@@ -543,94 +553,77 @@ public class guiPerusahaan extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel10.setText("Data Pelamar");
 
-        btnCariPelamar.setText("Cari Pelamar");
-
         btnBack6.setText("Kembali");
+
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel13.setText("Input ID Pelamar");
+
+        tfCariIDPelamar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfCariIDPelamar1ActionPerformed(evt);
+            }
+        });
+
+        btnCari4.setText("Cari Pelamar");
+        btnCari4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCari4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+            .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btnCariPerusahaan)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tfIdBerkas, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(tfIdLowongan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(btnBack6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCariPelamar)))
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel13)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(tfIdPerusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnCariLowongan)
-                                    .addComponent(jScrollPane7))
-                                .addGap(73, 73, 73))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addGap(140, 140, 140))))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(btnTerima)
-                        .addGap(47, 47, 47)
-                        .addComponent(btnTolak)
-                        .addGap(0, 108, Short.MAX_VALUE))))
+                        .addComponent(tfCariIDPelamar1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCari4)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addGap(170, 170, 170))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnTerima)
+                .addGap(47, 47, 47)
+                .addComponent(btnTolak)
+                .addGap(132, 132, 132))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addComponent(btnBack6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfIdLowongan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfIdPerusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCariPerusahaan)
-                    .addComponent(btnCariLowongan))
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tfIdBerkas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel13)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCariPelamar)
+                    .addComponent(tfCariIDPelamar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCari4))
+                .addGap(162, 162, 162)
+                .addComponent(btnBack6)
+                .addGap(45, 45, 45))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jLabel10)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTerima)
                     .addComponent(btnTolak))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnBack6)
-                .addContainerGap())
+                .addGap(88, 88, 88))
         );
 
         jTabbedPane4.addTab("Seleksi", jPanel7);
@@ -663,6 +656,46 @@ public class guiPerusahaan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBack2ActionPerformed
 
+    private void tfCariIDLowonganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCariIDLowonganActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfCariIDLowonganActionPerformed
+
+    private void tfIdPrshn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfIdPrshn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfIdPrshn1ActionPerformed
+
+    private void tfIDLowonganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfIDLowonganActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfIDLowonganActionPerformed
+
+    private void tfJenisLowonganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfJenisLowonganActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfJenisLowonganActionPerformed
+
+    private void btnHapusLowonganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusLowonganActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHapusLowonganActionPerformed
+
+    private void tfCariIDPelamar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCariIDPelamar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfCariIDPelamar1ActionPerformed
+
+    private void btnCari1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCari1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCari1ActionPerformed
+
+    private void btnCari4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCari4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCari4ActionPerformed
+
+    public int getTfIdPrshn1() {
+        return Integer.parseInt(tfIdPrshn1.getText());
+    }
+
+    public String getTfJenisLowongan() {
+        return tfJenisLowongan.getText();
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnBack2;
@@ -673,9 +706,7 @@ public class guiPerusahaan extends javax.swing.JFrame {
     private javax.swing.JButton btnCari1;
     private javax.swing.JButton btnCari2;
     private javax.swing.JButton btnCari3;
-    private javax.swing.JButton btnCariLowongan;
-    private javax.swing.JButton btnCariPelamar;
-    private javax.swing.JButton btnCariPerusahaan;
+    private javax.swing.JButton btnCari4;
     private javax.swing.JButton btnDaftar;
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnHapusLowongan;
@@ -686,18 +717,17 @@ public class guiPerusahaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
@@ -708,11 +738,8 @@ public class guiPerusahaan extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
@@ -720,20 +747,16 @@ public class guiPerusahaan extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTextField tfCariIDLowongan;
     private javax.swing.JTextField tfCariIDPelamar;
+    private javax.swing.JTextField tfCariIDPelamar1;
     private javax.swing.JTextField tfCariIDPerusahaan;
     private javax.swing.JTextField tfIDLowongan;
-    private javax.swing.JTextField tfIdBerkas;
-    private javax.swing.JTextField tfIdLowongan;
-    private javax.swing.JTextField tfIdPerusahaan;
     private javax.swing.JTextField tfIdPrshn;
+    private javax.swing.JTextField tfIdPrshn1;
     private javax.swing.JTextField tfJenisLowongan;
     private javax.swing.JTextField tfNamaCEO;
     private javax.swing.JTextField tfNamaPrshn;
     private javax.swing.JTextField tfRequirement;
     private javax.swing.JTextField tfTgl;
-    private javax.swing.JTextArea txDataBerkas;
-    private javax.swing.JTextArea txDataLowongan;
-    private javax.swing.JTextArea txDataPelamar;
     private javax.swing.JTextArea txLowongan;
     private javax.swing.JTextArea txPelamar;
     private javax.swing.JTextArea txPelamar2;
@@ -751,15 +774,13 @@ public class guiPerusahaan extends javax.swing.JFrame {
         btnCari1.addActionListener(e);
         btnCari2.addActionListener(e);
         btnCari3.addActionListener(e);
-        btnCariLowongan.addActionListener(e);
-        btnCariPelamar.addActionListener(e);
-        btnCariPerusahaan.addActionListener(e);
+        btnCari4.addActionListener(e);
         btnDaftar.addActionListener(e);
         btnHapus.addActionListener(e);
         btnHapusLowongan.addActionListener(e);
         btnTerima.addActionListener(e);
         btnTolak.addActionListener(e);
-        
+        btnTambahLowongan.addActionListener(e);        
     }
 
     public JButton getBtnBack() {
@@ -802,18 +823,6 @@ public class guiPerusahaan extends javax.swing.JFrame {
         return tfCariIDLowongan;
     }
 
-    public JButton getBtnCariLowongan() {
-        return btnCariLowongan;
-    }
-
-    public JButton getBtnCariPelamar() {
-        return btnCariPelamar;
-    }
-
-    public JButton getBtnCariPerusahaan() {
-        return btnCariPerusahaan;
-    }
-
     public JButton getBtnDaftar() {
         return btnDaftar;
     }
@@ -838,6 +847,10 @@ public class guiPerusahaan extends javax.swing.JFrame {
         return btnTolak;
     }
 
+    public JButton getBtnCari4() {
+        return btnCari4;
+    }
+
     public int getTfCariIDLowongan() {
         return Integer.parseInt(tfCariIDLowongan.getText());
     }
@@ -846,24 +859,20 @@ public class guiPerusahaan extends javax.swing.JFrame {
         return Integer.parseInt(tfCariIDPelamar.getText());
     }
 
+    public String getTfCariIDPelamar1() {
+        return tfCariIDPelamar1.getText();
+    }
+
+    public void setTxPelamar2(JTextArea txPelamar2) {
+        this.txPelamar2 = txPelamar2;
+    }
+
     public int getTfCariIDPerusahaan() {
         return Integer.parseInt(tfCariIDPerusahaan.getText());
     }
 
-    public int getTfIdBerkas() {
-        return Integer.parseInt(tfIdBerkas.getText());
-    }
-
-    public int getTfIdLowongan() {
-        return Integer.parseInt(tfIdLowongan.getText());
-    }
-
-    public int getTfIdPerusahaan() {
-        return Integer.parseInt(tfIdPerusahaan.getText());
-    }
-
-    public int getTfIdPrshn() {
-        return Integer.parseInt(tfIdPrshn.getText());
+    public String getTfIdPrshn() {
+        return tfIdPrshn.getText();
     }
 
     public String getTfNamaCEO() {
@@ -890,18 +899,6 @@ public class guiPerusahaan extends javax.swing.JFrame {
         return tfRequirement.getText();
     }
 
-    public void setTxDataBerkas(String s) {
-        txDataBerkas.setText(s);
-    }
-
-    public void setTxDataLowongan(String s) {
-        txDataLowongan.setText(s);
-    }
-
-    public void setTxDataPelamar(String s) {
-        txDataPelamar.setText(s);
-    }
-
     public void setTxLowongan(String s) {
         txLowongan.setText(s);
     }
@@ -921,17 +918,24 @@ public class guiPerusahaan extends javax.swing.JFrame {
     public void Reset(){
         tfCariIDLowongan.setText("");
         tfCariIDPelamar.setText("");
+        tfCariIDPelamar1.setText("");
         tfCariIDPerusahaan.setText("");
         tfIDLowongan.setText("");
-        tfIdBerkas.setText("");
-        tfIdLowongan.setText("");
-        tfIdPerusahaan.setText("");
         tfIdPrshn.setText("");
         tfJenisLowongan.setText("");
         tfNamaCEO.setText("");
         tfNamaPrshn.setText("");
         tfRequirement.setText("");
         tfTgl.setText("");
+        txPerusahaan.setText("");
+        txLowongan.setText("");
+        txPelamar2.setText("");
     }
+
+    public JTextArea getTxPerusahaan() {
+        return txPerusahaan;
+    }
+
+    
     
 }

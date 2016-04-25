@@ -28,6 +28,14 @@ public class BerkasLamaran
 	{
 		this.edukasi=edukasi;
 	}
+
+    @Override
+    public String toString() {
+        return "Pengalaman=" + Pengalaman + 
+                "/n idLamaran=" + idLamaran + 
+                "/n edukasi=" + edukasi + 
+                "/n status=" + status;
+    }
         
 	public String getPengalaman()
 	{
@@ -49,6 +57,6 @@ public class BerkasLamaran
 
         public String getStatus() {
             return status;
-        }       
+        }      
 
 }

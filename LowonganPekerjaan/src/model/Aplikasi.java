@@ -17,7 +17,6 @@ import lowonganpekerjaan.Perusahaan;
 public class Aplikasi{
 	private ArrayList<Perusahaan> daftarPerusahaan = new ArrayList<Perusahaan>();
 	private ArrayList<Pelamar> daftarPelamar = new ArrayList<Pelamar>();
-        private ArrayList<Lowongan> daftarLowongan = new ArrayList<Lowongan>();
 	private int nPerusahaan=0;
         private int nPelamar=0;
         Scanner in = new Scanner(System.in);
@@ -32,51 +31,27 @@ public class Aplikasi{
 	{
             daftarPelamar.add(pl);
 	}
-	
-        public void addLowongan (Lowongan l){
-            daftarLowongan.add(l);
-        }
         
 	public Perusahaan getPerusahaan(int id)
 	{
             Perusahaan p = null;
-            for (int i=0;i<daftarPerusahaan.size();i++){
+            /*for (int i=0;i<daftarPerusahaan.size();i++){
                 if (id==daftarPerusahaan.get(i).getId()){
                     p=daftarPerusahaan.get(i);
+                }
+            }*/
+            for(Perusahaan x : daftarPerusahaan){
+                if(x.getId()==id){
+                    p = x;
                 }
             }
             return p;
 	}
-	
-        public void setStatusBerkas (int id, int idx,int idb,String b){
-            for (Perusahaan p : daftarPerusahaan){
-                if (p.getId()==id){
-                    ArrayList<Lowongan> l = new ArrayList();
-                    l=p.getLowongan();
-                    for(Lowongan s:l){
-                        if(s.getId()==idx){
-                            ArrayList<BerkasLamaran> bs = new ArrayList();
-                            bs=s.getBerkas();
-                            for(BerkasLamaran bsc : bs){
-                                if(bsc.getIdLamaran()==idb){
-                                    bsc.setStatus(b);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
         
-        public Lowongan getLowongan(int idl){
-            Lowongan l = null;
-            for (int i=0; i<daftarLowongan.size(); i++){
-                if (idl==daftarLowongan.get(i).getId()){
-                    l=daftarLowongan.get(i);
-                }
-            }
-            return l;
-        } 
+        public Perusahaan getPerusahaanIdx(int idx)
+	{
+            return daftarPerusahaan.get(idx);
+	}
         
 	public Pelamar getPelamar(int id)
 	{
@@ -94,7 +69,6 @@ public class Aplikasi{
         for (int i=0;i<daftarPerusahaan.size();i++){
                 if (id==daftarPerusahaan.get(i).getId()){
                     daftarPerusahaan.remove(i);
-                    System.out.println("Perusahaan dengan ID "+daftarPerusahaan.get(i).getId()+" telah dihapus");
                 }
             }    
 	}	

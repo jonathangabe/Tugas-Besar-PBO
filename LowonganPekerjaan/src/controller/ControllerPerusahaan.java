@@ -42,40 +42,73 @@ public class ControllerPerusahaan implements ActionListener{
             String namap = prs.getTfNamaPrshn();
             String name = prs.getTfNamaCEO();
             String tgl = prs.getTfTgl();
-            int idp = prs.getTfIdPrshn();
+            String idp = prs.getTfIdPrshn();
+            if("".equals(namap)){
+                JOptionPane.showMessageDialog(prs, "Nama Perusahaan Kosong");
+                prs.Reset();
+            }
+            else if("".equals(name))
+            {
+                JOptionPane.showMessageDialog(prs, "Nama CEO Kosong");
+                prs.Reset();
+            }
+            else if("".equals(tgl))
+            {
+                JOptionPane.showMessageDialog(prs, "Tanggal Masih Kosong");
+                prs.Reset();
+            }
+            else if("".equals(idp))
+            {
+                JOptionPane.showMessageDialog(prs, "ID Perusahaan Kosong");
+                prs.Reset();
+            }
+            else{
+                int x2 = Integer.parseInt(idp);
+                Perusahaan p = new Perusahaan(namap, name, tgl, x2);
+                app.addPerusahaan(p);
+                prs.Reset();
             
-            Perusahaan p = new Perusahaan(namap, name, tgl, idp);
-            app.addPerusahaan(p);
-            prs.Reset();
-            
-            JOptionPane.showMessageDialog(prs, "Perusahaan Berhasil di Tambah");
+                JOptionPane.showMessageDialog(prs, "Perusahaan Berhasil di Tambah");
+            }
         }
-        
         else if (x.equals(prs.getBtnTerima())){
-            String b = "Diterima";
-            int tempT1 = prs.getTfIdPerusahaan();
-            int tempT2 = prs.getTfIdLowongan();
-            int tempT3 = prs.getTfIdBerkas();
-            app.setStatusBerkas(tempT1, tempT2, tempT3, b);
+            int idP = Integer.parseInt(prs.getTfCariIDPelamar1());
+            int idL = app.getPelamar(idP).getBerkas().getIdLamaran();
+            for (int i=0;i<app.jumlahPerusahaan();i++)    
+            {
+                for (int j=0;j<app.getPerusahaanIdx(i).jumlahLowongan();j++)  
+                    if (idL==app.getPerusahaanIdx(i).getLowonganidx(j).getBerkasMid(idL).getIdLamaran())
+                    {
+                        app.getPerusahaan(i).getLowonganidx(j).berkasDiterimaId(idL);
+                        app.getPerusahaan(i).getLowonganidx(j).removeBerkasMasuk(idL);
+                    }
+            }
+            app.getPelamar(idP).getBerkas().setStatus("Diterima");
             prs.Reset();
             
             JOptionPane.showMessageDialog(prs, "Pelamar Diterima");
         }
         
         else if (x.equals(prs.getBtnHapus())){
-            int cid = prs.getTfIdPrshn();
+            int cid = prs.getTfCariIDPerusahaan();
             app.deletePerusahaan(cid);
             prs.Reset();
             
-            JOptionPane.showMessageDialog(prs, "Perusahaan Telah di Hapus");
+            JOptionPane.showMessageDialog(prs, "Perusahaan terhapus");
         }
         
         else if (x.equals(prs.getBtnTolak())){
-            String tolak = "Ditolak";
-            int tempT1 = prs.getTfIdPerusahaan();
-            int tempT2 = prs.getTfIdLowongan();
-            int tempT3 = prs.getTfIdBerkas();
-            app.setStatusBerkas(tempT1, tempT2, tempT3, tolak);
+            int idP = Integer.parseInt(prs.getTfCariIDPelamar1());
+            int idL = app.getPelamar(idP).getBerkas().getIdLamaran();
+            for (int i=0;i<app.jumlahPerusahaan();i++)    
+            {
+                for (int j=0;j<app.getPerusahaanIdx(i).jumlahLowongan();j++)  
+                    if (idL==app.getPerusahaanIdx(i).getLowonganidx(j).getBerkasMid(idL).getIdLamaran())
+                    {
+                        app.getPerusahaan(i).getLowonganidx(j).removeBerkasMasuk(idL);
+                    }
+            }
+            app.getPelamar(idP).getBerkas().setStatus("Ditolak");
             prs.Reset();
             
             JOptionPane.showMessageDialog(prs, "Pelamar Ditolak");
@@ -89,10 +122,18 @@ public class ControllerPerusahaan implements ActionListener{
    
         }
         
+        else if (x.equals(prs.getBtnCari4()))
+        {
+            int tempC4 = Integer.parseInt(prs.getTfCariIDPelamar1());
+            Pelamar pl;
+            pl = app.getPelamar(tempC4);
+            prs.setTxPelamar2(pl.DataPelamar());
+        }
+        
         else if (x.equals(prs.getBtnCari1())){
             int tempC1 = prs.getTfCariIDPerusahaan();
             Perusahaan ps;
-            ps = app.getDataPerusahaan(tempC1);
+            ps = app.getPerusahaan(tempC1);
             prs.setTxPerusahaan(ps.DataPerusahaan());
         }
         
@@ -127,53 +168,44 @@ public class ControllerPerusahaan implements ActionListener{
         }
         
         else if (x.equals(prs.getBtnCari2())){
-            int tempC3 = prs.getTfIdLowongan();
-            Lowongan l;
-            l = app.getLowongan(tempC3);
-            prs.setTxLowongan(l.DataLowongan());
-            
-        }
-        
-        else if (x.equals(prs.getBtnCariLowongan())){
-            int tempCL = prs.getTfIdLowongan();
-            Lowongan l;
-            l = app.getLowongan(tempCL);
-            prs.setTxLowongan(l.DataLowongan());
-        }
-        
-        else if (x.equals(prs.getBtnCariPelamar())){
-            int tempCPl = prs.getTfCariIDPelamar();
-            Pelamar pl;
-            pl = app.getPelamar(tempCPl);
-            prs.setTxPelamar(pl.DataPelamar());
-        }
-        
-        else if (x.equals(prs.getBtnCariPerusahaan())){
-            int tempCP = prs.getTfCariIDPerusahaan();
-            Perusahaan ps;
-            ps = app.getDataPerusahaan(tempCP);
-            prs.setTxPerusahaan(ps.DataPerusahaan());
-        }
-        
-        else if (x.equals(prs.getBtnHapusLowongan())){
-            int id = prs.getTfCariIDLowongan();
-            Perusahaan p = null;
-            p.removeLowongan(id);
-            
-            JOptionPane.showMessageDialog(prs, "Lowongan Telah di Hapus");
-        }
-        
+            int tempC3 = prs.getTfCariIDLowongan();
+            for (int i=0;i<app.jumlahPerusahaan();i++)    
+            {
+                for (int j=0;j<app.getPerusahaanIdx(i).jumlahLowongan();j++)  
+                    if (tempC3==app.getPerusahaanIdx(i).getLowonganidx(j).getId())
+                    {
+                        prs.setTxLowongan(app.getPerusahaanIdx(i).getLowonganidx(j).DataLowongan());
+                    }
+            }
+         }
+                
         else if (x.equals(prs.getBtnTambahLowongan())){
+            int idp = prs.getTfIdPrshn1();
             int idl = prs.getTfIDLowongan();
-            String jns = prs.getTfJenis();
+            String jns = prs.getTfJenisLowongan();
             String req = prs.getTfRequirement();
-            
-            Lowongan l = new Lowongan(jns, req, idl);
-            app.addLowongan(l);
+            Lowongan l = new Lowongan(jns, req, idl); 
+            app.getPerusahaan(idp).createLowongan(l);
             prs.Reset();
             
             JOptionPane.showMessageDialog(prs, "Lowongan Telah Terdaftar");
         }        
+        
+        else if (x.equals(prs.getBtnHapusLowongan())){
+            int cid = prs.getTfCariIDLowongan();
+            for (int i=0;i<app.jumlahPerusahaan();i++)
+            {
+                for (int j=0;j<app.getPerusahaanIdx(i).jumlahLowongan();j++)  
+                {    if (cid==app.getPerusahaanIdx(i).getLowonganidx(j).getId())
+                    {
+                    app.getPerusahaanIdx(i).removeLowongan(cid);
+                    }
+                }
+            }
+            prs.Reset();
+
+            JOptionPane.showMessageDialog(prs, "Lowongan terhapus");
+        }
     }
     
 }
