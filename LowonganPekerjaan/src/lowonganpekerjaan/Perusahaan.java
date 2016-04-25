@@ -91,6 +91,10 @@ public class Perusahaan extends Orang{
             return daftarLowongan;
         }
         
+        public void Shout()
+        {
+            System.out.println("");
+        }
         public String DataPerusahaan(){
             return "Nama Perusahaan: "+getNameP()+
                     "\nNama CEO: "+getName()+
