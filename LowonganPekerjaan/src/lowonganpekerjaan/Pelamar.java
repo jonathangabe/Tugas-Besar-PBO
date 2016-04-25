@@ -27,6 +27,7 @@ public class Pelamar extends Orang{
         public String DataPelamar(){
             return "Nama Pelamar: "+getName()+                 
                     "\nID Pelamar: "+getId()+
-                    "\nTanggal Mendaftar: "+getTanggal();
+                    "\nTanggal Mendaftar: "+getTanggal()+
+                    getBerkas().toString();
         }
 }
