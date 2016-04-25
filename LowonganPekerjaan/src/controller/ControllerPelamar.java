@@ -84,8 +84,7 @@ public class ControllerPelamar implements ActionListener {
             {
                 for (int j=0;j<app.getPerusahaanIdx(i).jumlahLowongan();j++) 
                 {
-                    String ex = app.getPerusahaanIdx(i).getLowonganidx(j).DataLowongan();
-                    plm.setTxLowongan(ex);
+                    plm.setTxLowongan(app.getPerusahaanIdx(i).getLowonganidx(j).DataLowongan());
                 }
             }
         }
